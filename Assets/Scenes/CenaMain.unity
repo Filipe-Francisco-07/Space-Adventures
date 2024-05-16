@@ -50597,6 +50597,18 @@ PrefabInstance:
       value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 9db631775b26de343bef85202c0ee19d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 9db631775b26de343bef85202c0ee19d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 9db631775b26de343bef85202c0ee19d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 9db631775b26de343bef85202c0ee19d, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
