@@ -51083,7 +51083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15df46cbf7adbde4eb397bff69b29ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 100
+  healthPoints: 0
   pulando: 0
   jumpDuplo: 0
   jump: 10
