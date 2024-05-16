@@ -14,9 +14,9 @@ public class GerenciadorDeJogo : MonoBehaviour
     {
         instance = this;
     }
-
     public void UpdateCoins()
     {
        showCoins.text = totalCoins.ToString();
     }
+
 }

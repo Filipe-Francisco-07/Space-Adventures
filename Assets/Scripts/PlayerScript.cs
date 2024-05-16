@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMoviment : MonoBehaviour{
 
     
-
+    public int healthPoints;
     public bool pulando = false;
     public bool jumpDuplo;
     private Rigidbody2D rb;
@@ -32,21 +32,7 @@ public class PlayerMoviment : MonoBehaviour{
     void Andar() {
         horizontal = Input.GetAxis("Horizontal");
         transform.Translate(new Vector3(horizontal, 0, 0) * Time.deltaTime * velocidade);
-/*
-        if(Input.GetAxis("Horizontal") > 0f){
-           animacao.SetBool("walk", true);
-           transform.eulerAngles = new Vector3(0f,0f,0f);
-        }
 
-        if(Input.GetAxis("Horizontal") < 0f){
-            animacao.SetBool("walk", true);
-            transform.eulerAngles = new Vector3(0f,180f,0f);
-        }
-        
-        if(Input.GetAxis("Horizontal") == 0f){
-            animacao.SetBool("walk", false);
-        }
-        */
         if (horizontal > 0f) {
             if(pulando){
                 animacao.SetBool("jump", true);
