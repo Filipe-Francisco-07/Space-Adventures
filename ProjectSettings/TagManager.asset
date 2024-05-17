@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Coin
+  - KillingGround
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Coin
   - Water
   - UI
-  - 
+  - KillingGround
   - 
   - Ground
   - 

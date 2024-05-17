@@ -84,7 +84,7 @@ public class PlayerMoviment : MonoBehaviour{
             pulando = false;
              animacao.SetBool("jump", false);
         }
-        if(collision.gameObject.layer == 10)
+        if(collision.gameObject.layer == 10 &&  GerenciadorDeJogo.instance.totalCoins == 800 )
         {
             SceneManager.LoadScene("CenaMain2");
         }
