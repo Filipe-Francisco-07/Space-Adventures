@@ -28,9 +28,9 @@ public class GerenciadorDeJogo : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
     public void UpdateCoins()
     {
+        if (showCoins !=null)
        showCoins.text = totalCoins.ToString();
     }
 
