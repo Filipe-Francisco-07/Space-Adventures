@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CenaMain.unity
+    path: Assets/Scenes/CenaFase1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/CenaInicial.unity
@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CenaMain2.unity
     guid: 6531c8dfad2cbd84e99d65815dfe4d9a
+  - enabled: 1
+    path: Assets/Scenes/CenaFase1.2.unity
+    guid: 19ee37d46cd97e841b5af533d8ac56f7
+  - enabled: 1
+    path: Assets/Scenes/CenaFase1.3.unity
+    guid: 8a860672691e94d46bc3ddd7c52e978c
   m_configObjects: {}

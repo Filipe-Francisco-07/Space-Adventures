@@ -24,7 +24,6 @@ public class MoonCoin : MonoBehaviour
             GerenciadorDeJogo.instance.UpdateCoins();
 
             Destroy(gameObject, 0.75f);
-
         }
     }   
  

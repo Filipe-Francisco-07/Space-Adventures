@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerMoviment : MonoBehaviour{
+public class PlayerScript : MonoBehaviour{
 
-    
+    public int coins;
     public int healthPoints;
     public bool pulando = false;
     public bool jumpDuplo;
@@ -84,14 +84,24 @@ public class PlayerMoviment : MonoBehaviour{
             pulando = false;
              animacao.SetBool("jump", false);
         }
-        if(collision.gameObject.layer == 10 &&  GerenciadorDeJogo.instance.totalCoins == 800 )
+        if(collision.gameObject.layer == 10 )
         {
-            SceneManager.LoadScene("CenaMain2");
+            GerenciadorDeJogo.instance.TrocarCena("CenaFase1.2");
         }
-        if(collision.gameObject.layer == 11)
+         if(collision.gameObject.layer == 11)
         {
-            SceneManager.LoadScene("CenaBoss");
+            GerenciadorDeJogo.instance.TrocarCena("CenaFase1.3");
         }
+          if(collision.gameObject.layer == 13)
+        {
+            GerenciadorDeJogo.instance.TrocarCena("CenaMain2");
+        }
+         if(collision.gameObject.layer == 14)
+        {
+            GerenciadorDeJogo.instance.TrocarCena("CenaBoss");
+        }
+       
+       
     }
 
      void OnCollisionExit2D(Collision2D collision){
@@ -100,7 +110,6 @@ public class PlayerMoviment : MonoBehaviour{
             pulando = true;
         }
     }
-
 }
 
 
