@@ -101,7 +101,6 @@ public class PlayerScript : MonoBehaviour{
             GerenciadorDeJogo.instance.TrocarCena("CenaBoss");
         }
        
-       
     }
 
      void OnCollisionExit2D(Collision2D collision){
