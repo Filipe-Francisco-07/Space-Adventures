@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Coin
   - KillingGround
+  - EnemyInstantKill
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - TrocarFase1.3
   - TrocarMain2
   - irBoss
-  - 
+  - EnemyInstantKill
   - 
   - 
   - 
