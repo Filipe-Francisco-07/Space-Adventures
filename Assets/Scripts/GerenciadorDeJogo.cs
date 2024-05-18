@@ -1,24 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GerenciadorDeJogo : MonoBehaviour
 {
     public int totalCoins;
-    public TMP_Text showCoins;
+    public Text showCoins;
     public static GerenciadorDeJogo instance;
 
-    void Start()
+    private void Start()
     {
         instance = this;
 
     }
 
-    void Awake()
+    private void Awake()
     {
-        if (instance != null && instance != this)
+        /*if (instance != null && instance != this)
         {
             Destroy(gameObject);
         }
@@ -26,7 +27,16 @@ public class GerenciadorDeJogo : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+        }*/
+
+        if(instance == null){
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }else{
+            Destroy(gameObject);
         }
+
+
     }
     public void UpdateCoins()
     {
