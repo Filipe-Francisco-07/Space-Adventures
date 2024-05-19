@@ -9,7 +9,12 @@ public class DynamicEnemy : MonoBehaviour
     private bool direcao;
     private float temp;
     [SerializeField] float tempo_vigilha = 2f;
-
+    void OnTriggerEnter2D(Collider2D collider){
+        if (collider.gameObject.CompareTag("Player")) {
+            Scene currentscene = SceneManager.GetActiveScene();
+            GerenciadorDeJogo.instance.KillPlayer(collider,currentscene.name.ToString());
+        }   
+    }
     void Update()
     {
         if(direcao){
@@ -25,4 +30,5 @@ public class DynamicEnemy : MonoBehaviour
     }
     
     }
+
 }
