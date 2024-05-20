@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GerenciadorDeJogo : MonoBehaviour
 {
     public int totalCoins;
-    public Text showCoins;
+    public TMP_Text showCoins;
     public static GerenciadorDeJogo instance;
 
     private void Start()
