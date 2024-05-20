@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 31f06999cadf4774aba21acc30b7cdae
+guid: 5fe45c6c58d92c04a92c8c20a60fd154
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: purple
+  - name: MoonCoin 2
     originalName: 
-    pivot: {x: 0.49600002, y: -0.6923077}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 125
-      height: 52
-    spriteID: 0a279b7d910cf3d40b99e193294011be
+      width: 64
+      height: 64
+    spriteID: 597bff9a97afde44f963c7db05ab18b5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,24 +144,24 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1451318644
-    name: purple
+    guid: 231607520
+    name: MoonCoin 2
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: purple
+    - name: MoonCoin 2
       frameIndex: 0
       cellRect:
-        x: 2
-        y: 36
-        width: 125
-        height: 52
-      spriteId: 0a279b7d910cf3d40b99e193294011be
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      spriteId: 597bff9a97afde44f963c7db05ab18b5
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 128}
+  canvasSize: {x: 64, y: 64}

@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: MoonCoin
+  - name: MoonCoin_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.48333335, y: -0.016393442}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 64
-      height: 64
-    spriteID: e7fbce10107395c40809e7fc83970b10
+      width: 60
+      height: 61
+    spriteID: 8fbfed8e02e36b440918695dd4a5f504
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,6 +141,166 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: MoonCoin_Frame_1
+    originalName: 
+    pivot: {x: 0.5102041, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 142
+      width: 49
+      height: 61
+    spriteID: 7225ec10a7e47974b9cd289313d3962e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 142}
+  - name: MoonCoin_Frame_2
+    originalName: 
+    pivot: {x: 0.5277778, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 73
+      width: 36
+      height: 61
+    spriteID: 19c88fb76879e3d4fbf8f5153078365e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 73}
+  - name: MoonCoin_Frame_3
+    originalName: 
+    pivot: {x: 0.5185185, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 4
+      width: 27
+      height: 61
+    spriteID: ee5b09d3849f8134bb6a15d30ee0c029
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 4}
+  - name: MoonCoin_Frame_4
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 142
+      width: 9
+      height: 61
+    spriteID: 07d3accf602057249a93af1238d0a397
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 142}
+  - name: MoonCoin_Frame_5
+    originalName: 
+    pivot: {x: 0.5185185, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 73
+      width: 27
+      height: 61
+    spriteID: 81a0debede0ddfd459f2e4c95ad1a4a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 73}
+  - name: MoonCoin_Frame_6
+    originalName: 
+    pivot: {x: 0.5277778, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 142
+      width: 36
+      height: 61
+    spriteID: de089e0340bf77e478a87719817082f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 142}
+  - name: MoonCoin_Frame_7
+    originalName: 
+    pivot: {x: 0.5102041, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 49
+      height: 61
+    spriteID: ec97b56b60aa5ca4992e49f4ba2d85e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
+  - name: MoonCoin_Frame_8
+    originalName: 
+    pivot: {x: 0.48333335, y: -0.016393442}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 73
+      width: 60
+      height: 61
+    spriteID: 51ca22eab0b298c4fa7335174fa8979d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 73}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,14 +310,78 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: MoonCoin
+    - name: MoonCoin_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      spriteId: e7fbce10107395c40809e7fc83970b10
+        x: 3
+        y: 1
+        width: 60
+        height: 61
+      spriteId: 8fbfed8e02e36b440918695dd4a5f504
+    - name: MoonCoin_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 7
+        y: 1
+        width: 49
+        height: 61
+      spriteId: 7225ec10a7e47974b9cd289313d3962e
+    - name: MoonCoin_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 13
+        y: 1
+        width: 36
+        height: 61
+      spriteId: 19c88fb76879e3d4fbf8f5153078365e
+    - name: MoonCoin_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 18
+        y: 1
+        width: 27
+        height: 61
+      spriteId: ee5b09d3849f8134bb6a15d30ee0c029
+    - name: MoonCoin_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 26
+        y: 1
+        width: 9
+        height: 61
+      spriteId: 07d3accf602057249a93af1238d0a397
+    - name: MoonCoin_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 18
+        y: 1
+        width: 27
+        height: 61
+      spriteId: 81a0debede0ddfd459f2e4c95ad1a4a4
+    - name: MoonCoin_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 13
+        y: 1
+        width: 36
+        height: 61
+      spriteId: de089e0340bf77e478a87719817082f6
+    - name: MoonCoin_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 7
+        y: 1
+        width: 49
+        height: 61
+      spriteId: ec97b56b60aa5ca4992e49f4ba2d85e6
+    - name: MoonCoin_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 3
+        y: 1
+        width: 60
+        height: 61
+      spriteId: 51ca22eab0b298c4fa7335174fa8979d
     linkedCells: []
     parentIndex: -1
   platformSettings: []

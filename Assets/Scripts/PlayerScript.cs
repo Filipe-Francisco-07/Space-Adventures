@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour{
     private float vertical;
     [SerializeField] int velocidade = 5;
     private Animator animacao;
+    private bool winding;
 
 
     void Start()
@@ -31,7 +32,8 @@ public class PlayerScript : MonoBehaviour{
 
     void Andar() {
         horizontal = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(horizontal, 0, 0) * Time.deltaTime * velocidade);
+        // transform.Translate(new Vector3(horizontal, 0, 0) * Time.deltaTime * velocidade);
+        rb.velocity = new Vector2(horizontal * velocidade, rb.velocity.y);
 
         if (horizontal > 0f) {
             if(pulando){
@@ -61,7 +63,7 @@ public class PlayerScript : MonoBehaviour{
 
     void Pular(){
 
-        if(Input.GetButtonDown("Jump")){
+        if(Input.GetButtonDown("Jump") && !winding){
             if(!pulando){
                 rb.AddForce(new Vector2(0f, jump), ForceMode2D.Impulse);
                 jumpDuplo = true;
@@ -101,6 +103,14 @@ public class PlayerScript : MonoBehaviour{
             GerenciadorDeJogo.instance.TrocarCena("CenaBoss");
         }
        
+    }
+
+    void OnTriggerStay2D(){
+        winding = true;
+    }
+
+    void OnTriggerExit2D(){
+        winding = false;
     }
 
      void OnCollisionExit2D(Collision2D collision){

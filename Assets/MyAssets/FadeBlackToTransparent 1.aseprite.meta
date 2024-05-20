@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5a1e9252cb8c3904d97b46bc91299ef4
+guid: bcdb1edee9c438b4fbd0af7fee3aa5fb
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: FadeBlackToTransparent_Frame_0
+  - name: FadeBlackToTransparent 1_Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 128
       height: 128
-    spriteID: b3b61e5522dcdcc4ebad66bef939baf1
+    spriteID: f0a2fa5c73ac65d42847878112bf12f5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: FadeBlackToTransparent_Frame_1
+  - name: FadeBlackToTransparent 1_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 140
       width: 128
       height: 128
-    spriteID: 9fb45330e18da464786818ede783b02f
+    spriteID: 8947c62a0544ca74b8b92e84c82cd664
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,7 +161,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 140}
-  - name: FadeBlackToTransparent_Frame_2
+  - name: FadeBlackToTransparent 1_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 276
       width: 128
       height: 128
-    spriteID: 30e36079354b5f142b082825b565577c
+    spriteID: 8cc30594dc977974387dbc56a6fd6b5f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,7 +181,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 276}
-  - name: FadeBlackToTransparent_Frame_3
+  - name: FadeBlackToTransparent 1_Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 412
       width: 128
       height: 128
-    spriteID: a32998fb9fdd1bd4cb0ee446f9e2b981
+    spriteID: 48a1c6b91be569e46be90b5b2c2d4eb4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,7 +201,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 412}
-  - name: FadeBlackToTransparent_Frame_4
+  - name: FadeBlackToTransparent 1_Frame_4
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 548
       width: 128
       height: 128
-    spriteID: 2276ad4fbe328d4438932ad7335788d4
+    spriteID: 41347e405d30ff9478ebc7dc204d4fa1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -221,7 +221,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 548}
-  - name: FadeBlackToTransparent_Frame_5
+  - name: FadeBlackToTransparent 1_Frame_5
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 684
       width: 128
       height: 128
-    spriteID: cf550e539cc3c0b4a9a8fb98f5ffe2ef
+    spriteID: 3ee21e1cb468b1a4096ab92d59365b09
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -241,7 +241,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 684}
-  - name: FadeBlackToTransparent_Frame_6
+  - name: FadeBlackToTransparent 1_Frame_6
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 820
       width: 128
       height: 128
-    spriteID: d9571784ce692a442a7a14a10cbf03af
+    spriteID: 30fcf3fe593663d46908c0a8ead943b7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -261,7 +261,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 820}
-  - name: FadeBlackToTransparent_Frame_7
+  - name: FadeBlackToTransparent 1_Frame_7
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 4
       width: 128
       height: 128
-    spriteID: 3b98167f0d1fa5642a4c3d23052dc526
+    spriteID: 83b077918b69e0b449b0384331db9560
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -281,7 +281,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 140, y: 4}
-  - name: FadeBlackToTransparent_Frame_8
+  - name: FadeBlackToTransparent 1_Frame_8
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 140
       width: 128
       height: 128
-    spriteID: 5f050623d30eee848bb6946dfd74d51e
+    spriteID: 5320f42516ef0fe4fb7f02ef9c29a361
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -301,7 +301,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 140, y: 140}
-  - name: FadeBlackToTransparent_Frame_9
+  - name: FadeBlackToTransparent 1_Frame_9
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 276
       width: 128
       height: 128
-    spriteID: b98aef32142b68e4e8663efae45e9678
+    spriteID: ab041d89191978b41bb94d95358af21b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -321,7 +321,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 140, y: 276}
-  - name: FadeBlackToTransparent_Frame_10
+  - name: FadeBlackToTransparent 1_Frame_10
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 412
       width: 128
       height: 128
-    spriteID: 8ea536677e8a4f147b90abef3f7afcd9
+    spriteID: df29691879505874aa9f693d6e94e232
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -341,7 +341,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 140, y: 412}
-  - name: FadeBlackToTransparent_Frame_11
+  - name: FadeBlackToTransparent 1_Frame_11
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 548
       width: 128
       height: 128
-    spriteID: bc74a0c6b0e71894c8580c469bbd4528
+    spriteID: 11ad838117b62e5428a6886f145db11d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -361,7 +361,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 140, y: 548}
-  - name: FadeBlackToTransparent_Frame_12
+  - name: FadeBlackToTransparent 1_Frame_12
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 684
       width: 128
       height: 128
-    spriteID: bedf5c5babb561941af00502b7a02715
+    spriteID: 3df87e5e8207fd34fbca3ee1ae375c54
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -384,116 +384,116 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -2045717348
-    name: FadeBlackToTransparent
+    guid: 2038690701
+    name: FadeBlackToTransparent 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: FadeBlackToTransparent_Frame_0
+    - name: FadeBlackToTransparent 1_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: b3b61e5522dcdcc4ebad66bef939baf1
-    - name: FadeBlackToTransparent_Frame_1
+      spriteId: f0a2fa5c73ac65d42847878112bf12f5
+    - name: FadeBlackToTransparent 1_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: 9fb45330e18da464786818ede783b02f
-    - name: FadeBlackToTransparent_Frame_2
+      spriteId: 8947c62a0544ca74b8b92e84c82cd664
+    - name: FadeBlackToTransparent 1_Frame_2
       frameIndex: 2
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: 30e36079354b5f142b082825b565577c
-    - name: FadeBlackToTransparent_Frame_3
+      spriteId: 8cc30594dc977974387dbc56a6fd6b5f
+    - name: FadeBlackToTransparent 1_Frame_3
       frameIndex: 3
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: a32998fb9fdd1bd4cb0ee446f9e2b981
-    - name: FadeBlackToTransparent_Frame_4
+      spriteId: 48a1c6b91be569e46be90b5b2c2d4eb4
+    - name: FadeBlackToTransparent 1_Frame_4
       frameIndex: 4
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: 2276ad4fbe328d4438932ad7335788d4
-    - name: FadeBlackToTransparent_Frame_5
+      spriteId: 41347e405d30ff9478ebc7dc204d4fa1
+    - name: FadeBlackToTransparent 1_Frame_5
       frameIndex: 5
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: cf550e539cc3c0b4a9a8fb98f5ffe2ef
-    - name: FadeBlackToTransparent_Frame_6
+      spriteId: 3ee21e1cb468b1a4096ab92d59365b09
+    - name: FadeBlackToTransparent 1_Frame_6
       frameIndex: 6
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: d9571784ce692a442a7a14a10cbf03af
-    - name: FadeBlackToTransparent_Frame_7
+      spriteId: 30fcf3fe593663d46908c0a8ead943b7
+    - name: FadeBlackToTransparent 1_Frame_7
       frameIndex: 7
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: 3b98167f0d1fa5642a4c3d23052dc526
-    - name: FadeBlackToTransparent_Frame_8
+      spriteId: 83b077918b69e0b449b0384331db9560
+    - name: FadeBlackToTransparent 1_Frame_8
       frameIndex: 8
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: 5f050623d30eee848bb6946dfd74d51e
-    - name: FadeBlackToTransparent_Frame_9
+      spriteId: 5320f42516ef0fe4fb7f02ef9c29a361
+    - name: FadeBlackToTransparent 1_Frame_9
       frameIndex: 9
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: b98aef32142b68e4e8663efae45e9678
-    - name: FadeBlackToTransparent_Frame_10
+      spriteId: ab041d89191978b41bb94d95358af21b
+    - name: FadeBlackToTransparent 1_Frame_10
       frameIndex: 10
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: 8ea536677e8a4f147b90abef3f7afcd9
-    - name: FadeBlackToTransparent_Frame_11
+      spriteId: df29691879505874aa9f693d6e94e232
+    - name: FadeBlackToTransparent 1_Frame_11
       frameIndex: 11
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: bc74a0c6b0e71894c8580c469bbd4528
-    - name: FadeBlackToTransparent_Frame_12
+      spriteId: 11ad838117b62e5428a6886f145db11d
+    - name: FadeBlackToTransparent 1_Frame_12
       frameIndex: 12
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 128
-      spriteId: bedf5c5babb561941af00502b7a02715
+      spriteId: 3df87e5e8207fd34fbca3ee1ae375c54
     linkedCells: []
     parentIndex: -1
   platformSettings: []

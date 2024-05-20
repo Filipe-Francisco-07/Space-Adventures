@@ -13,7 +13,7 @@ public class Trampoline : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collider) {
         if (collider.gameObject.tag == ("Player")) {
             animator.SetTrigger("Ativa");
-            collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 15f), ForceMode2D.Impulse);          
+            collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 12.5f), ForceMode2D.Impulse);          
         }
 }   
 
