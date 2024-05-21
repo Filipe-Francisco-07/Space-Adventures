@@ -15,7 +15,7 @@ public class FallingGround : MonoBehaviour
    void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "Player")
         {
-            Invoke("Cair",1.5f);
+            Invoke("Cair",0.75f);
         }
        
     }

@@ -94,13 +94,13 @@ public class PlayerScript : MonoBehaviour{
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase1.3");
         }
-          if(collision.gameObject.layer == 13)
+          if(collision.gameObject.layer == 12)
         {
-            GerenciadorDeJogo.instance.TrocarCena("CenaMain2");
+            GerenciadorDeJogo.instance.TrocarCena("CenaFase1.4");
         }
-         if(collision.gameObject.layer == 14)
+         if(collision.gameObject.layer == 13)
         {
-            GerenciadorDeJogo.instance.TrocarCena("CenaBoss");
+            GerenciadorDeJogo.instance.TrocarCena("CenaFase2");
         }
        
     }

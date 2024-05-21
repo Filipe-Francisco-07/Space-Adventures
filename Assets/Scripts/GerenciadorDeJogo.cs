@@ -13,14 +13,14 @@ public class GerenciadorDeJogo : MonoBehaviour
     public GameObject HealthPoints;
     private int currentHealth;
     private Image[] heartImages;
+    private bool block;
 
     void Start()
     {
         instance = this;
         heartImages = HealthPoints.GetComponentsInChildren<Image>();
         currentHealth = heartImages.Length; 
-        Debug.Log(currentHealth);
-
+        block = false;
     }
 
     private void Awake()
@@ -44,18 +44,28 @@ public class GerenciadorDeJogo : MonoBehaviour
         totalCoins = 0;
     }
     public void KillPlayer(Collider2D player,string nome){
-        if(currentHealth > 0){
-            currentHealth --;
-            heartImages[currentHealth].enabled = false;
-            Destroy(player.gameObject);
-            if(currentHealth == 0){
-                TrocarCena("CenaFase1");   
-                ResetHealth(); 
-            }else{
-                TrocarCena(nome); 
-            }
+        if(!block){
+            if(currentHealth > 0){
+                currentHealth --;
+                heartImages[currentHealth].enabled = false;
+                Destroy(player.gameObject);
+                block = true;
+                if(currentHealth == 0){
+                    TrocarCena("CenaFase1");   
+                    ResetHealth(); 
+                }else{
+                    TrocarCena(nome); 
+                }
         }
-        Debug.Log(currentHealth);
+        } else{
+            Espera();
+            block = false;
+        }
+    }
+
+    IEnumerator Espera()
+    {
+        yield return new WaitForSeconds(0.3f);
     }
 
     public void ResetHealth()
