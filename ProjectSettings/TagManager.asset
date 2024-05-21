@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - KillingGround
   - EnemyInstantKill
+  - Voador_Enemy
   layers:
   - Default
   - TransparentFX
