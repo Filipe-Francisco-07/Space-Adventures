@@ -10,25 +10,21 @@ public class GerenciadorDeJogo : MonoBehaviour
     public int totalCoins;
     public TMP_Text showCoins;
     public static GerenciadorDeJogo instance;
+    public GameObject HealthPoints;
+    private int currentHealth;
+    private Image[] heartImages;
 
-    private void Start()
+    void Start()
     {
         instance = this;
+        heartImages = HealthPoints.GetComponentsInChildren<Image>();
+        currentHealth = heartImages.Length; 
+        Debug.Log(currentHealth);
 
     }
 
     private void Awake()
     {
-        /*if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }*/
-
         if(instance == null){
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -48,9 +44,28 @@ public class GerenciadorDeJogo : MonoBehaviour
         totalCoins = 0;
     }
     public void KillPlayer(Collider2D player,string nome){
-        Destroy(player.gameObject);
-        TrocarCena(nome);
+        if(currentHealth > 0){
+            currentHealth --;
+            heartImages[currentHealth].enabled = false;
+            Destroy(player.gameObject);
+            if(currentHealth == 0){
+                TrocarCena("CenaFase1");   
+                ResetHealth(); 
+            }else{
+                TrocarCena(nome); 
+            }
+        }
+        Debug.Log(currentHealth);
     }
+
+    public void ResetHealth()
+{
+    currentHealth = heartImages.Length;
+    foreach (var heart in heartImages)
+    {
+        heart.enabled = true;
+    }
+}
    public void TrocarCena(string nomeCena)
     {    
         SceneManager.LoadScene(nomeCena);
