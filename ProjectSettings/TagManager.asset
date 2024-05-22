@@ -9,6 +9,7 @@ TagManager:
   - KillingGround
   - EnemyInstantKill
   - Voador_Enemy
+  - Voador_Vertical
   layers:
   - Default
   - TransparentFX

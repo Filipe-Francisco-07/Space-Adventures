@@ -24,8 +24,7 @@ public class EnemyAI : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        // Movimenta o inimigo na direção atual
+    {  
         rb.velocity = new Vector2(velocidade, rb.velocity.y);
 
         // Detecta a colisão com a parede usando Raycast
@@ -40,6 +39,7 @@ public class EnemyAI : MonoBehaviour
         {
             InverterDirecao();
         }
+          
     }
 
     // Inverte a direção do movimento
