@@ -10,6 +10,7 @@ TagManager:
   - EnemyInstantKill
   - Voador_Enemy
   - Voador_Vertical
+  - FadeBlackToTransparent
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - KillingGround
   - Ventilador
   - Ground
-  - 
+  - FadeBlackToTransparent
   - TrocarFase
   - TrocarFase2
   - TrocarFase3

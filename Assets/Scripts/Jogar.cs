@@ -7,6 +7,5 @@ public class Jogar : MonoBehaviour
 {
     public void Play(){
         SceneManager.LoadScene("CenaFase1");
-           GerenciadorDeJogo.instance.ZerarCoins();
     }
 }

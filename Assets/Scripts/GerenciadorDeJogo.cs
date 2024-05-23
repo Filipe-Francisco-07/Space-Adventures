@@ -58,14 +58,14 @@ public class GerenciadorDeJogo : MonoBehaviour
                 }
         }
         } else{
-            Espera();
+            Espera(0.3f);
             block = false;
         }
     }
 
-    IEnumerator Espera()
+    IEnumerator Espera(float num)
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(num);
     }
 
     public void ResetHealth()
@@ -77,7 +77,8 @@ public class GerenciadorDeJogo : MonoBehaviour
     }
 }
    public void TrocarCena(string nomeCena)
-    {    
+    {
         SceneManager.LoadScene(nomeCena);
     }
+
 }
