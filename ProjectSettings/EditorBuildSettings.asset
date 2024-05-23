@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CenaFase2.3.unity
     guid: 60dbb1d3615910f44bc32933bc6b3ec9
   - enabled: 1
+    path: Assets/Scenes/CenaFase2.4.unity
+    guid: 7f03951f60209c248a7cc9b8a940df3a
+  - enabled: 1
     path: Assets/Scenes/CenaBoss.unity
     guid: 28d0600786dcf2a458d37ef12e6df831
   - enabled: 1
