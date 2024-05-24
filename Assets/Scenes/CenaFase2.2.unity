@@ -6688,7 +6688,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 905444200983663158, guid: b4d5d0a45270abe4c8c6f84bcac70b70, type: 3}
       propertyPath: m_Name
-      value: Trampolin
+      value: Trampolim
       objectReference: {fileID: 0}
     - target: {fileID: 2907973724369501739, guid: b4d5d0a45270abe4c8c6f84bcac70b70, type: 3}
       propertyPath: m_LocalPosition.x

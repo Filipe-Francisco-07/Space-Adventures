@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7534339953519846575}
   - component: {fileID: 8586002854435753761}
   m_Layer: 8
-  m_Name: Trampolin
+  m_Name: Trampolim
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
