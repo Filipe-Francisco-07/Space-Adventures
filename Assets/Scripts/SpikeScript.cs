@@ -5,16 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class SpikeScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private bool isDying;
     void Start()
     {
         
     }
 
     void OnTriggerEnter2D(Collider2D collider){
-        if (collider.gameObject.CompareTag("Player")) {
-            Scene currentscene = SceneManager.GetActiveScene();
-            GerenciadorDeJogo.instance.KillPlayer(collider,currentscene.name.ToString());
+        if (collider.gameObject.CompareTag("Player") && !isDying) {
+            isDying = true;
+            Scene currentScene = SceneManager.GetActiveScene();
+            GerenciadorDeJogo.instance.KillPlayer(collider, currentScene.name);
+            StartCoroutine(ResetarMorte(0.5f));
         }   
+    }
+
+    IEnumerator ResetarMorte(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isDying = false;
     }
 }

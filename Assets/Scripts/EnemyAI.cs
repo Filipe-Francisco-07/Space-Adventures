@@ -13,7 +13,6 @@ public class EnemyAI : MonoBehaviour
     private bool colisao;
     [SerializeField] float velocidade;
     public LayerMask lay;
-    private bool morreu;
 
     // Start is called before the first frame update
     void Start()
@@ -56,12 +55,11 @@ public class EnemyAI : MonoBehaviour
     void OnCollisionEnter2D(Collision2D colisao){
         if(colisao.gameObject.tag == "Player"){
             float altura = colisao.contacts[0].point.y - top.position.y;
-            if(altura > 0 && !morreu){
+            if(altura > 0){
                 colisao.gameObject.GetComponent<Rigidbody2D>().AddForce( Vector2.up * 10, ForceMode2D.Impulse);  
                 velocidade = 0;
                 Destroy(gameObject,0.25f);
             }else{
-                morreu = true;
                 Scene currentscene = SceneManager.GetActiveScene();
                 GerenciadorDeJogo.instance.KillPlayer(colisao.collider,currentscene.name.ToString());
             }

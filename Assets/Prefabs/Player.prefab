@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 4515674696132461694}
   - component: {fileID: 3176732337399949079}
   - component: {fileID: 4380507995579302595}
-  - component: {fileID: 4098465484217148528}
   - component: {fileID: 5139466230452193853}
-  - component: {fileID: 4899929807120770342}
   - component: {fileID: 445427745774563638}
+  - component: {fileID: 5185331631440727283}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -110,51 +109,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &4098465484217148528
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3783604513732511775}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.010149479, y: 0.025485635}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6845293, y: 0.45715833}
-  m_EdgeRadius: 0
 --- !u!50 &5139466230452193853
 Rigidbody2D:
   serializedVersion: 4
@@ -182,24 +136,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &4899929807120770342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3783604513732511775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15df46cbf7adbde4eb397bff69b29ab2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: 0
-  healthPoints: 0
-  pulando: 0
-  jumpDuplo: 0
-  jump: 10
-  velocidade: 5
 --- !u!58 &445427745774563638
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -232,6 +168,24 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.001039505, y: -0.2093386}
+  m_Offset: {x: 0.019291878, y: -0.10725355}
   serializedVersion: 2
-  m_Radius: 0.29990393
+  m_Radius: 0.39161968
+--- !u!114 &5185331631440727283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783604513732511775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15df46cbf7adbde4eb397bff69b29ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 0
+  healthPoints: 0
+  pulando: 0
+  jumpDuplo: 0
+  jump: 10
+  velocidade: 5

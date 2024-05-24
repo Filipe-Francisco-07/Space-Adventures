@@ -71,8 +71,8 @@ public class GerenciadorDeJogo : MonoBehaviour
                 }
         }
         } else{
-            Espera(0.3f);
             block = false;
+            Espera(0.3f);
         }
     }
 
@@ -91,6 +91,7 @@ public class GerenciadorDeJogo : MonoBehaviour
 }
    public void TrocarCena(string nomeCena)
     {
+        block = false;
         currentCoins = 0;
         SceneManager.LoadScene(nomeCena);
     }
