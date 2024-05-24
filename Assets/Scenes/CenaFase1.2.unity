@@ -3335,11 +3335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515674696132461694, guid: adbd0b61c5a739d4aa923d765ca319b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.49
+      value: 8.25
       objectReference: {fileID: 0}
     - target: {fileID: 4515674696132461694, guid: adbd0b61c5a739d4aa923d765ca319b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.86
+      value: -3.73
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5631,6 +5631,18 @@ PrefabInstance:
     - target: {fileID: 7481044807219187036, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_Name
       value: Serra
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481044807219187036, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481044807219187036, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
+      propertyPath: m_TagString
+      value: EnemyInstantKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863809949337499859, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7863809949337499859, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
