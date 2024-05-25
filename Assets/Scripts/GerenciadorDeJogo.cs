@@ -16,6 +16,9 @@ public class GerenciadorDeJogo : MonoBehaviour
     private int currentHealth;
     private Image[] heartImages;
     private bool block;
+    private string playerName = "Filipe";
+    private string totalCoinsKey = "TotalCoins";
+    private string playerNameKey = "PlayerName";
 
     void Start()
     {
@@ -23,6 +26,8 @@ public class GerenciadorDeJogo : MonoBehaviour
         heartImages = HealthPoints.GetComponentsInChildren<Image>();
         currentHealth = heartImages.Length; 
         block = false;
+
+        LoadData();
     }
 
     private void Awake()
@@ -47,12 +52,16 @@ public class GerenciadorDeJogo : MonoBehaviour
         totalCoins -= currentCoins;
         currentCoins = 0;
         showCoins.text = totalCoins.ToString();
+
+        SaveData();
     }
 
     public void ZerarCoins(){
         collectedCoins = 0;
         totalCoins = 0;
         showCoins.text = totalCoins.ToString();
+
+        SaveData();
     }
     public void KillPlayer(Collider2D player,string nome){
         if(!block){
@@ -74,6 +83,7 @@ public class GerenciadorDeJogo : MonoBehaviour
             block = false;
             Espera(0.3f);
         }
+        SaveData();
     }
 
     IEnumerator Espera(float num)
@@ -88,12 +98,30 @@ public class GerenciadorDeJogo : MonoBehaviour
     {
         heart.enabled = true;
     }
+     SaveData();
 }
    public void TrocarCena(string nomeCena)
     {
         block = false;
         currentCoins = 0;
         SceneManager.LoadScene(nomeCena);
+
+        SaveData();
+    }
+
+    private void SaveData()
+    {
+        PlayerPrefs.SetInt(totalCoinsKey, totalCoins);
+        PlayerPrefs.SetString(playerNameKey, playerName);
+        PlayerPrefs.Save(); // Salva os dados no disco imediatamente
+    }
+
+    // Método para carregar os dados salvos
+    private void LoadData()
+    {
+        totalCoins = PlayerPrefs.GetInt(totalCoinsKey, 0);
+        playerName = PlayerPrefs.GetString(playerNameKey, "Filipe");
+        showCoins.text = totalCoins.ToString();
     }
 
 }
