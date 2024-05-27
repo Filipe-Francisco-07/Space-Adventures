@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8307e2726288d5b4a8736063fd8bc772
+guid: eed7d5bcdb07013488e1015d206cd516
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,138 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BOSS_ATTACK1_Frame_0
-    originalName: 
-    pivot: {x: -0.05263153, y: -0.086142324}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 630
-      y: 279
-      width: 190
-      height: 267
-    spriteID: 5e254cb2f09dd3d499157e8f2f534d72
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 630, y: 279}
-  - name: BOSS_ATTACK1_Frame_1
-    originalName: 
-    pivot: {x: -0.020408144, y: -0.086142324}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 630
-      y: 4
-      width: 196
-      height: 267
-    spriteID: 94963ff22892eee4b84cd194f8715b2f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 630, y: 4}
-  - name: BOSS_ATTACK1_Frame_2
-    originalName: 
-    pivot: {x: -0.015228411, y: -0.086142324}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 424
-      y: 279
-      width: 197
-      height: 267
-    spriteID: 4d98a341961325c4fb476d41d4a669d2
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 424, y: 279}
-  - name: BOSS_ATTACK1_Frame_3
-    originalName: 
-    pivot: {x: -0.015228411, y: -0.086142324}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 424
-      y: 554
-      width: 197
-      height: 267
-    spriteID: e24fe002b7b25084d86a20d288eb9dfc
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 424, y: 554}
-  - name: BOSS_ATTACK1_Frame_4
-    originalName: 
-    pivot: {x: -0.010101, y: -0.086142324}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 424
-      y: 4
-      width: 198
-      height: 267
-    spriteID: d157f0effaf2797469d7cf7aac11f358
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 424, y: 4}
-  - name: BOSS_ATTACK1_Frame_5
-    originalName: 
-    pivot: {x: -0.005025121, y: -0.086142324}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 216
-      y: 554
-      width: 199
-      height: 267
-    spriteID: 946884888086b0c4fb701e8a940bc7ee
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 216, y: 554}
-  - name: BOSS_ATTACK1_Frame_6
+  - name: BOSS_ATTACK2 1_Frame_0
     originalName: 
     pivot: {x: 0, y: -0.086142324}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 216
-      y: 4
+      x: 223
+      y: 279
       width: 200
       height: 267
-    spriteID: 00c550c3f3d2fe9499fee9aec2df6299
+    spriteID: 64640c21c47df2d4280db5e6850dec8a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -260,19 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 216, y: 4}
-  - name: BOSS_ATTACK1_Frame_7
+    uvTransform: {x: 223, y: 279}
+  - name: BOSS_ATTACK2 1_Frame_1
     originalName: 
-    pivot: {x: 0, y: -0.086142324}
+    pivot: {x: 0.009900981, y: -0.086142324}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 216
-      y: 279
-      width: 200
+      x: 223
+      y: 4
+      width: 202
       height: 267
-    spriteID: ad05600caf13d624da5740dcbd47ebd2
+    spriteID: 08f9ffd1bc5799442b90d6c7481f1fa0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -280,19 +160,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 216, y: 279}
-  - name: BOSS_ATTACK1_Frame_8
+    uvTransform: {x: 223, y: 4}
+  - name: BOSS_ATTACK2 1_Frame_2
     originalName: 
-    pivot: {x: 0.0049751196, y: -0.086142324}
+    pivot: {x: 0.029126186, y: -0.086142324}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 554
-      width: 201
+      width: 206
       height: 267
-    spriteID: afae1b86959895a4eaa4310c5916551d
+    spriteID: e85d6a6e302059c4a9be5c006a5a5dbb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -301,38 +181,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 554}
-  - name: BOSS_ATTACK1_Frame_9
+  - name: BOSS_ATTACK2 1_Frame_3
     originalName: 
-    pivot: {x: 0.014778311, y: -0.086142324}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 279
-      width: 203
-      height: 267
-    spriteID: 4acffccb1a3ed17499e076ec926773ca
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 279}
-  - name: BOSS_ATTACK1_Frame_10
-    originalName: 
-    pivot: {x: 0.019607825, y: -0.086142324}
+    pivot: {x: 0.052132707, y: -0.086142324}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 204
+      width: 211
       height: 267
-    spriteID: f24962d90d84fea4b878162b3998f939
+    spriteID: 2a526a14b5505a743b74ac1506d85573
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -341,103 +201,215 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: BOSS_ATTACK2 1_Frame_4
+    originalName: 
+    pivot: {x: 0.033816453, y: -0.086142324}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 279
+      width: 207
+      height: 267
+    spriteID: a2ae2041c1fe3684fa6276ac64de61e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 279}
+  - name: BOSS_ATTACK2 1_Frame_5
+    originalName: 
+    pivot: {x: -0.010101, y: -0.086142324}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 223
+      y: 554
+      width: 198
+      height: 267
+    spriteID: 90b0cc87182506545a131a925b3f95f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 223, y: 554}
+  - name: BOSS_ATTACK2 1_Frame_6
+    originalName: 
+    pivot: {x: -0.036269397, y: -0.086142324}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 433
+      y: 4
+      width: 193
+      height: 267
+    spriteID: 4e7b88cf6bbd33b4992de8dda71dda28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 433, y: 4}
+  - name: BOSS_ATTACK2 1_Frame_7
+    originalName: 
+    pivot: {x: -0.036269397, y: -0.086142324}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 433
+      y: 279
+      width: 193
+      height: 267
+    spriteID: 1710ac458b9f9a345af1895c4aac3bb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 433, y: 279}
+  - name: BOSS_ATTACK2 1_Frame_8
+    originalName: 
+    pivot: {x: -0.041666627, y: -0.086142324}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 433
+      y: 554
+      width: 192
+      height: 267
+    spriteID: 33271f4be2e3f2e4f8297926d0df95f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 433, y: 554}
+  - name: BOSS_ATTACK2 1_Frame_9
+    originalName: 
+    pivot: {x: -0.047120374, y: -0.086142324}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 634
+      y: 4
+      width: 191
+      height: 267
+    spriteID: d5f420505dd6f9642ba9710e10d4dc3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 634, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 272003183
-    name: BOSS_ATTACK1
+    guid: -648654051
+    name: BOSS_ATTACK2 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BOSS_ATTACK1_Frame_0
+    - name: BOSS_ATTACK2 1_Frame_0
       frameIndex: 0
       cellRect:
-        x: 210
+        x: 200
         y: 23
-        width: 190
+        width: 200
         height: 267
-      spriteId: 5e254cb2f09dd3d499157e8f2f534d72
-    - name: BOSS_ATTACK1_Frame_1
+      spriteId: 64640c21c47df2d4280db5e6850dec8a
+    - name: BOSS_ATTACK2 1_Frame_1
       frameIndex: 1
       cellRect:
-        x: 204
+        x: 198
         y: 23
-        width: 196
+        width: 202
         height: 267
-      spriteId: 94963ff22892eee4b84cd194f8715b2f
-    - name: BOSS_ATTACK1_Frame_2
+      spriteId: 08f9ffd1bc5799442b90d6c7481f1fa0
+    - name: BOSS_ATTACK2 1_Frame_2
       frameIndex: 2
       cellRect:
-        x: 203
+        x: 194
         y: 23
-        width: 197
+        width: 206
         height: 267
-      spriteId: 4d98a341961325c4fb476d41d4a669d2
-    - name: BOSS_ATTACK1_Frame_3
+      spriteId: e85d6a6e302059c4a9be5c006a5a5dbb
+    - name: BOSS_ATTACK2 1_Frame_3
       frameIndex: 3
       cellRect:
-        x: 203
+        x: 189
         y: 23
-        width: 197
+        width: 211
         height: 267
-      spriteId: e24fe002b7b25084d86a20d288eb9dfc
-    - name: BOSS_ATTACK1_Frame_4
+      spriteId: 2a526a14b5505a743b74ac1506d85573
+    - name: BOSS_ATTACK2 1_Frame_4
       frameIndex: 4
+      cellRect:
+        x: 193
+        y: 23
+        width: 207
+        height: 267
+      spriteId: a2ae2041c1fe3684fa6276ac64de61e8
+    - name: BOSS_ATTACK2 1_Frame_5
+      frameIndex: 5
       cellRect:
         x: 202
         y: 23
         width: 198
         height: 267
-      spriteId: d157f0effaf2797469d7cf7aac11f358
-    - name: BOSS_ATTACK1_Frame_5
-      frameIndex: 5
-      cellRect:
-        x: 201
-        y: 23
-        width: 199
-        height: 267
-      spriteId: 946884888086b0c4fb701e8a940bc7ee
-    - name: BOSS_ATTACK1_Frame_6
+      spriteId: 90b0cc87182506545a131a925b3f95f1
+    - name: BOSS_ATTACK2 1_Frame_6
       frameIndex: 6
       cellRect:
-        x: 200
+        x: 207
         y: 23
-        width: 200
+        width: 193
         height: 267
-      spriteId: 00c550c3f3d2fe9499fee9aec2df6299
-    - name: BOSS_ATTACK1_Frame_7
+      spriteId: 4e7b88cf6bbd33b4992de8dda71dda28
+    - name: BOSS_ATTACK2 1_Frame_7
       frameIndex: 7
       cellRect:
-        x: 200
+        x: 207
         y: 23
-        width: 200
+        width: 193
         height: 267
-      spriteId: ad05600caf13d624da5740dcbd47ebd2
-    - name: BOSS_ATTACK1_Frame_8
+      spriteId: 1710ac458b9f9a345af1895c4aac3bb4
+    - name: BOSS_ATTACK2 1_Frame_8
       frameIndex: 8
       cellRect:
-        x: 199
+        x: 208
         y: 23
-        width: 201
+        width: 192
         height: 267
-      spriteId: afae1b86959895a4eaa4310c5916551d
-    - name: BOSS_ATTACK1_Frame_9
+      spriteId: 33271f4be2e3f2e4f8297926d0df95f7
+    - name: BOSS_ATTACK2 1_Frame_9
       frameIndex: 9
       cellRect:
-        x: 197
+        x: 209
         y: 23
-        width: 203
+        width: 191
         height: 267
-      spriteId: 4acffccb1a3ed17499e076ec926773ca
-    - name: BOSS_ATTACK1_Frame_10
-      frameIndex: 10
-      cellRect:
-        x: 196
-        y: 23
-        width: 204
-        height: 267
-      spriteId: f24962d90d84fea4b878162b3998f939
+      spriteId: d5f420505dd6f9642ba9710e10d4dc3d
     linkedCells: []
     parentIndex: -1
   platformSettings: []
