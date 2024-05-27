@@ -11,6 +11,7 @@ TagManager:
   - Voador_Enemy
   - Voador_Vertical
   - FadeBlackToTransparent
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - EnemyInstantKill
   - Enemy
   - TrocarFaseBoss
-  - 
+  - Boss
   - 
   - 
   - 

@@ -924,19 +924,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1786450284}
+    m_TransformParent: {fileID: 1090656140}
     m_Modifications:
     - target: {fileID: 118698249268240253, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.323
+      value: 4.1615596
       objectReference: {fileID: 0}
     - target: {fileID: 118698249268240253, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.503
+      value: 3.3202069
       objectReference: {fileID: 0}
     - target: {fileID: 118698249268240253, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.071844034
       objectReference: {fileID: 0}
     - target: {fileID: 118698249268240253, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -944,15 +944,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 118698249268240253, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 118698249268240253, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 118698249268240253, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 118698249268240253, guid: 80b0592880f68c340926f5c139ef42e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4303,6 +4303,7 @@ Transform:
   - {fileID: 331446782}
   - {fileID: 180970251}
   - {fileID: 456785965}
+  - {fileID: 485837600}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1101396018
@@ -4963,14 +4964,6 @@ PrefabInstance:
       value: espinho (29)
       objectReference: {fileID: 0}
     - target: {fileID: 2980214957149312062, guid: e5fc460488f889a499fb5f2dede70a02, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2980214957149312062, guid: e5fc460488f889a499fb5f2dede70a02, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2980214957149312062, guid: e5fc460488f889a499fb5f2dede70a02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.4655595
       objectReference: {fileID: 0}
@@ -5613,7 +5606,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1597411001}
-  - {fileID: 485837600}
   - {fileID: 650296698}
   - {fileID: 816176771}
   m_Father: {fileID: 0}

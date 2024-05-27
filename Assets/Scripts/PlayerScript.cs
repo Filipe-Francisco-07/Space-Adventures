@@ -86,28 +86,29 @@ public class PlayerScript : MonoBehaviour{
             pulando = false;
              animacao.SetBool("jump", false);
         }
-        if(collision.gameObject.layer == 10 )
+        if(collision.gameObject.layer == 10 && GerenciadorDeJogo.instance.currentCoins >= 400)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase1.2");
         }
-         if(collision.gameObject.layer == 11)
+         if(collision.gameObject.layer == 11 && GerenciadorDeJogo.instance.currentCoins >= 400)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase1.3");
         }
-          if(collision.gameObject.layer == 12)
+          if(collision.gameObject.layer == 12 && GerenciadorDeJogo.instance.currentCoins >= 500)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2");
         }
-         if(collision.gameObject.layer == 13)
+         if(collision.gameObject.layer == 13&& GerenciadorDeJogo.instance.currentCoins >= 400)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2.2");
         }
-        if(collision.gameObject.layer == 14)
+        if(collision.gameObject.layer == 14 && GerenciadorDeJogo.instance.currentCoins >= 600)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2.3");
         }
-        if(collision.gameObject.layer == 17)
+        if(collision.gameObject.layer == 17 && GerenciadorDeJogo.instance.currentCoins >= 400)
         {
+            GerenciadorDeJogo.instance.ResetHealth();
             GerenciadorDeJogo.instance.TrocarCena("CenaBoss");
         }
        
