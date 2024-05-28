@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class CanvScript : MonoBehaviour
 {
-    public Slider slider;
     private static CanvScript instance = null;
 
     void Awake()

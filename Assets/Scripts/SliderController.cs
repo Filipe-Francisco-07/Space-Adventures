@@ -6,18 +6,34 @@ using UnityEngine.UI;
 
 public class SliderController : MonoBehaviour
 {
-    public Slider slider;
+    public Slider slider; 
 
-    void Start()
+    private void Start()
     {
-        slider.gameObject.SetActive(false);
+        Debug.Log("oi");
+        if (slider != null)
+        {
+            slider.gameObject.SetActive(false);
+        }
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        Debug.Log("oi");
     }
 
-    void Update(){
-        Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "CenaBoss")
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("oi");
+        if (scene.name == "CenaBoss")
         {
-            slider.gameObject.SetActive(true);
+            Debug.Log("oi");
+            if (slider != null)
+            {
+                slider.gameObject.SetActive(true);
+            }
         }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

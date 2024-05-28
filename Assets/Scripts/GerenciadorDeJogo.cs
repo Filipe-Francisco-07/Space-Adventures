@@ -21,6 +21,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     private int currentBossHP; 
     public Slider healthSlider;
     public TMP_Text showBossHP;
+    public GameObject objectToDestroy;
 
     void Start()
     {
@@ -32,14 +33,12 @@ public class GerenciadorDeJogo : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
 
         if(currentScene.name == "CenaBoss"){
-                healthSlider.gameObject.SetActive(true);
-                currentBossHP = bossHealth;
-                healthSlider.maxValue = 1000;
-                healthSlider.value = currentBossHP;
-                showBossHP.text = bossHealth.ToString();
-            }else{
-                healthSlider.gameObject.SetActive(false);
-                healthSlider.gameObject.SetActive(true);
+            
+            healthSlider.gameObject.SetActive(true);
+            currentBossHP = bossHealth;
+            healthSlider.maxValue = 1000;
+            healthSlider.value = currentBossHP;
+            showBossHP.text = bossHealth.ToString();
         }
 
         LoadData();

@@ -101,11 +101,14 @@ public class PlayerScript : MonoBehaviour
 
     void Atirar()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
-            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
-            projectile.GetComponent<Projectile>().SetDirection(direction);
+        Scene currentscene = SceneManager.GetActiveScene();
+        if(currentscene.name == "CenaBoss"){
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+                GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+                projectile.GetComponent<Projectile>().SetDirection(direction);
+        }
         }
     }
 
@@ -116,23 +119,28 @@ public class PlayerScript : MonoBehaviour
             pulando = false;
             animacao.SetBool("jump", false);
         }
-        if (collision.gameObject.layer == 10 && GerenciadorDeJogo.instance.currentCoins >= 400)
+        if (collision.gameObject.layer == 10 //&& GerenciadorDeJogo.instance.currentCoins >= 400
+        )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase1.2");
         }
-        if (collision.gameObject.layer == 11 && GerenciadorDeJogo.instance.currentCoins >= 400)
+        if (collision.gameObject.layer == 11 //&& GerenciadorDeJogo.instance.currentCoins >= 400
+        )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase1.3");
         }
-        if (collision.gameObject.layer == 12 && GerenciadorDeJogo.instance.currentCoins >= 500)
+        if (collision.gameObject.layer == 12 // && GerenciadorDeJogo.instance.currentCoins >= 500
+        )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2");
         }
-        if (collision.gameObject.layer == 13 && GerenciadorDeJogo.instance.currentCoins >= 400)
+        if (collision.gameObject.layer == 13// && GerenciadorDeJogo.instance.currentCoins >= 400
+        )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2.2");
         }
-        if (collision.gameObject.layer == 14 && GerenciadorDeJogo.instance.currentCoins >= 600)
+        if (collision.gameObject.layer == 14 //&& GerenciadorDeJogo.instance.currentCoins >= 600
+        )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2.3");
         }
