@@ -17,7 +17,6 @@ public class Jogar : MonoBehaviour
         {
             inputField.text = nome;
         }
-        Debug.Log(nome);
     }
 
    public void Play()

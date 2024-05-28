@@ -22,6 +22,8 @@ public class CanvScript : MonoBehaviour
         }
     }
     void Update(){
+            
+
         Scene currentScene = SceneManager.GetActiveScene();
         if(currentScene.name == "CenaFinal"){
             Destroy(gameObject);

@@ -10,21 +10,17 @@ public class SliderController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("oi");
         if (slider != null)
         {
             slider.gameObject.SetActive(false);
         }
         SceneManager.sceneLoaded += OnSceneLoaded;
-        Debug.Log("oi");
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("oi");
         if (scene.name == "CenaBoss")
         {
-            Debug.Log("oi");
             if (slider != null)
             {
                 slider.gameObject.SetActive(true);
