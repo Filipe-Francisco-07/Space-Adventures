@@ -17,6 +17,10 @@ public class GerenciadorDeJogo : MonoBehaviour
     private Image[] heartImages;
     private bool block;
     private int totalCollected;
+    public int bossHealth = 1000;
+    private int currentBossHP; 
+    public Slider healthSlider;
+    public TMP_Text showBossHP;
 
     void Start()
     {
@@ -25,6 +29,18 @@ public class GerenciadorDeJogo : MonoBehaviour
         heartImages = HealthPoints.GetComponentsInChildren<Image>();
         currentHealth = heartImages.Length; 
         block = false;
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if(currentScene.name == "CenaBoss"){
+                healthSlider.gameObject.SetActive(true);
+                currentBossHP = bossHealth;
+                healthSlider.maxValue = 1000;
+                healthSlider.value = currentBossHP;
+                showBossHP.text = bossHealth.ToString();
+            }else{
+                healthSlider.gameObject.SetActive(false);
+                healthSlider.gameObject.SetActive(true);
+        }
 
         LoadData();
     }
@@ -44,6 +60,13 @@ public class GerenciadorDeJogo : MonoBehaviour
         currentCoins += collectedCoins;
         showCoins.text = totalCoins.ToString();
         collectedCoins = 0;
+    }
+
+     public void BossKiller()
+    {
+        collectedCoins += 5000;
+        UpdateCoins();
+        SaveData();
     }
 
     public void ResetLevelCoins()
@@ -93,6 +116,17 @@ public class GerenciadorDeJogo : MonoBehaviour
         heart.enabled = true;
     }
 }
+
+    public void BossHit(){
+        bossHealth -= 30;
+        if(bossHealth <= 0){
+            healthSlider.value = 0;
+            showBossHP.text = 0.ToString();
+        }else{
+        healthSlider.value = bossHealth;
+        showBossHP.text = bossHealth.ToString();
+        }
+    }
    public void TrocarCena(string nomeCena)
     {
         block = false;
@@ -100,8 +134,6 @@ public class GerenciadorDeJogo : MonoBehaviour
         currentCoins = 0;
         SceneManager.LoadScene(nomeCena);
 
-        Debug.Log(PlayerPrefs.GetString("playerName"));
-        Debug.Log(PlayerPrefs.GetInt("totalCoins"));
     }
 
     private void SaveData()

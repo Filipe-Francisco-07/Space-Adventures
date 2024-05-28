@@ -7,15 +7,15 @@ public class Boss_AI : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D rb;
-    public Transform player;  // Referência ao jogador
+    public Transform player; 
     public float speed = 2f;
-    public float attackDistance = 2f;  // Distância para iniciar o ataque
+    public float attackDistance = 2f;  
     private bool isAttacking = false;
-    private bool facingRight = true;  // Controle de direção
+    private bool facingRight = true; 
     private PolygonCollider2D bossCollider;
     private bool isDying;
-    public GameObject sword;  // Referência ao GameObject da espada
-    private Animator swordAnimator;  // Referência ao Animator da espada
+    public GameObject sword;  
+    private Animator swordAnimator;  
 
     void Start()
     {
@@ -24,9 +24,14 @@ public class Boss_AI : MonoBehaviour
         swordAnimator = sword.GetComponent<Animator>();
         isDying = false;
     }
-
     void Update()
     {
+        if(GerenciadorDeJogo.instance.bossHealth <= 0){
+            Destroy(gameObject,0.5f);
+            GerenciadorDeJogo.instance.BossKiller();
+            Esperar();
+            SceneManager.LoadScene("CenaFinal");
+        } 
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
@@ -66,6 +71,11 @@ public class Boss_AI : MonoBehaviour
                 Flip();
             }
         }
+    }
+
+    IEnumerator Esperar()
+    {
+        yield return new WaitForSeconds(5f);
     }
 
     IEnumerator Attack()

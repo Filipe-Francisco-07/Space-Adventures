@@ -20,8 +20,7 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Verifica se o projétil colidiu com algo
-        Debug.Log("Colidiu com: " + collision.gameObject.name);
-        Destroy(gameObject); // Destroi o projétil ao colidir com algo
+        GerenciadorDeJogo.instance.BossHit();
+        Destroy(gameObject);
     }
 }
