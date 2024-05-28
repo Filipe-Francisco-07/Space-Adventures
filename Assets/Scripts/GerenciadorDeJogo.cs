@@ -152,4 +152,12 @@ public class GerenciadorDeJogo : MonoBehaviour
         showCoins.text = totalCoins.ToString();
     }
 
+    public void Restarted(){
+        bossHealth = 1000;
+        totalCoins = 0;
+        ResetHealth();
+        ResetLevelCoins();
+        LoadData();
+    }
+
 }
