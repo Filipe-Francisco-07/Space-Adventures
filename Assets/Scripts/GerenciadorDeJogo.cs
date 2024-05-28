@@ -22,6 +22,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     public Slider healthSlider;
     public TMP_Text showBossHP;
     public GameObject objectToDestroy;
+    public TMP_Text textoFinal;
 
     void Start()
     {
@@ -128,6 +129,9 @@ public class GerenciadorDeJogo : MonoBehaviour
     }
    public void TrocarCena(string nomeCena)
     {
+        if(nomeCena=="CenaFinal"){
+            textoFinal.text = ("CONGRATULATIONS "+PlayerPrefs.GetString("playerName")+" YOU BEATED THE GAME AND COLLECTED A TOTAL OF "+ PlayerPrefs.GetInt("totalCoins").ToString() + " MOON COINS, THAT'S AWESOME!");
+        }
         block = false;
         SaveData();
         currentCoins = 0;
