@@ -8,7 +8,6 @@ public class SpikeScript : MonoBehaviour
 
     void Start()
     {
-        // Reseta isDying para false quando a cena é carregada
         isDying = false;
     }
 
@@ -18,14 +17,13 @@ public class SpikeScript : MonoBehaviour
         {
             isDying = true;
             Scene currentScene = SceneManager.GetActiveScene();
+            StartCoroutine(ResetarMorte(0.5f));
             GerenciadorDeJogo.instance.KillPlayer(collider, currentScene.name);
-            StartCoroutine(ResetarMorte(0.7f));
         }
     }
 
     IEnumerator ResetarMorte(float delay)
     {
         yield return new WaitForSeconds(delay);
-        isDying = false;
     }
 }

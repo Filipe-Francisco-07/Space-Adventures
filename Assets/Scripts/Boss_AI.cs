@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss_AI : MonoBehaviour
 {
@@ -24,14 +23,27 @@ public class Boss_AI : MonoBehaviour
         swordAnimator = sword.GetComponent<Animator>();
         isDying = false;
     }
+
     void Update()
     {
-        if(GerenciadorDeJogo.instance.bossHealth <= 0){
-            Destroy(gameObject,0.5f);
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player")?.transform;
+            
+            if (player == null)
+            {
+                return;
+            }
+        }
+
+        if (GerenciadorDeJogo.instance.bossHealth <= 0)
+        {
+            Destroy(gameObject, 0.5f);
             GerenciadorDeJogo.instance.BossKiller();
-            Esperar();
-            SceneManager.LoadScene("CenaFinal");
-        } 
+            StartCoroutine(Esperar());
+            GerenciadorDeJogo.instance.TrocarCena("CenaFinal");
+            return;
+        }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
@@ -43,15 +55,15 @@ public class Boss_AI : MonoBehaviour
             swordAnimator.SetBool("Walking", false);
             animator.SetBool("Idle", false);
             swordAnimator.SetBool("Idle", false);
-            return;  
+            return;
         }
+
         if (distanceToPlayer <= attackDistance)
         {
             StartCoroutine(Attack());
         }
         else
         {
-
             animator.SetBool("Walking", true);
             swordAnimator.SetBool("Walking", true);
             animator.SetBool("Idle", false);
@@ -88,7 +100,7 @@ public class Boss_AI : MonoBehaviour
         animator.SetBool("Idle", false);
         swordAnimator.SetBool("Idle", false);
         rb.velocity = Vector2.zero;
-        
+
         yield return new WaitForSeconds(1f);
 
         isAttacking = false;

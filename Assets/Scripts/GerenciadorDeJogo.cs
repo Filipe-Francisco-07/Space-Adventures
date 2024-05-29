@@ -21,30 +21,117 @@ public class GerenciadorDeJogo : MonoBehaviour
     private int currentBossHP; 
     public Slider healthSlider;
     public TMP_Text showBossHP;
-    public GameObject objectToDestroy;
-    public TMP_Text textoFinal;
+    private bool paused;
+    public GameObject pause;
+    public GameObject lastScene;
+    public GameObject GameInterface;
+    public GameObject BossLifebar;
+    public TMP_Text ShowLastMessage;
+    public GameObject playerStats;
+    public TMP_Text NameStats;
+    public TMP_Text CoinStats;
+    public bool lookingStats;
 
     void Start()
     {
-        totalCoins = 0;
+        lookingStats= false;
         instance = this;
-        heartImages = HealthPoints.GetComponentsInChildren<Image>();
-        currentHealth = heartImages.Length; 
         block = false;
-        Scene currentScene = SceneManager.GetActiveScene();
-
-        if(currentScene.name == "CenaBoss"){
-            
-            healthSlider.gameObject.SetActive(true);
-            currentBossHP = bossHealth;
-            healthSlider.maxValue = 1000;
-            healthSlider.value = currentBossHP;
-            showBossHP.text = bossHealth.ToString();
-        }
-
+        paused = false;
         LoadData();
     }
+    void Update(){
+        if(!paused){
+            if(Input.GetKeyDown(KeyCode.Escape)){
+                Pause();
+            }
+        }else{
+            if(Input.GetKeyDown(KeyCode.Escape) && !lookingStats){
+                Resume();
+            } else{
+                HideStats();
+            }
+        }
+    }
 
+    public void Pause(){
+        Time.timeScale = 0;
+        pause.SetActive(true);
+        BossLifebar.SetActive(false);
+        paused = true; 
+    }
+
+    public void Resume(){
+        pause.SetActive(false);
+        Scene currentScene = SceneManager.GetActiveScene();
+        if(currentScene.name == "CenaBoss"){
+            BossLifebar.SetActive(true);
+        }
+        Time.timeScale = 1;   
+        paused = false;
+    }
+
+     public void Restart(){
+        currentHealth --;
+        Scene currentScene = SceneManager.GetActiveScene();
+        TrocarCena(currentScene.name);
+        pause.SetActive(false);
+        Time.timeScale = 1;   
+        paused = false;
+    }
+
+     public void TotalRestart(){
+        SaveData();
+        ZerarCoins();
+        ResetHealth();
+        TrocarCena("CenaFase1");
+        GameInterface.SetActive(true);
+        BossLifebar.SetActive(false);
+        lastScene.SetActive(false);
+    }
+
+    public void MainMenu(){
+        Scene currentScene = SceneManager.GetActiveScene();
+        TrocarCena(currentScene.name);
+        GameInterface.SetActive(false);
+        BossLifebar.SetActive(false);
+        lastScene.SetActive(false);
+        SaveData();
+        ZerarCoins();
+        ResetHealth();
+        if(currentScene.name != "CenaFinal"){
+            Resume();
+        }
+        TrocarCena("CenaInicial");
+    }
+
+    public void EndStats(){
+        lastScene.SetActive(false);
+        ShowStats();
+    }
+    public void ShowStats(){
+        Resume();
+        Time.timeScale = 0;
+        playerStats.SetActive(true);
+        NameStats.text = PlayerPrefs.GetString("playerName");
+        CoinStats.text = PlayerPrefs.GetInt("totalCoins").ToString();
+        lookingStats = true;
+    }
+    public void HideStats(){
+        Time.timeScale = 1;
+        playerStats.SetActive(false);
+        lookingStats = false;
+        Scene currentScene = SceneManager.GetActiveScene();
+        if(currentScene.name == "CenaFinal"){
+            lastScene.SetActive(true);
+        } else{
+            Pause();
+        }
+    }
+
+    public void ExitGame(){
+        Application.Quit();
+    }
     private void Awake()
     {
         if(instance == null){
@@ -129,16 +216,40 @@ public class GerenciadorDeJogo : MonoBehaviour
     }
    public void TrocarCena(string nomeCena)
     {
+         SceneManager.LoadScene(nomeCena);
+         
         if(nomeCena=="CenaFinal"){
-            textoFinal.text = ("CONGRATULATIONS "+PlayerPrefs.GetString("playerName")+" YOU BEATED THE GAME AND COLLECTED A TOTAL OF "+ PlayerPrefs.GetInt("totalCoins").ToString() + " MOON COINS, THAT'S AWESOME!");
+            GameInterface.SetActive(false);
+            BossLifebar.SetActive(false);
+            lastScene.SetActive(true);
+            ShowLastMessage.text = ("CONGRATULATIONS "+PlayerPrefs.GetString("playerName")+", YOU BEATED THE GAME AND COLLECTED A TOTAL OF "+ PlayerPrefs.GetInt("totalCoins").ToString() + " MOON COINS, THAT'S AWESOME!");
         }
+        if(nomeCena == "CenaBoss"){
+            BossLifebar.SetActive(true);  
+            GameInterface.SetActive(true);  
+            currentBossHP = bossHealth;
+            healthSlider.maxValue = 1000;
+            healthSlider.value = currentBossHP;
+            showBossHP.text = bossHealth.ToString();
+        }
+
+         if(nomeCena == "CenaFase1"){
+            totalCoins = 0;
+            GameInterface.SetActive(true);
+            bossHealth = 1000;
+        }
+
         block = false;
         SaveData();
         currentCoins = 0;
-        SceneManager.LoadScene(nomeCena);
 
     }
-
+     public void StartGame()
+    {
+        TrocarCena("CenaFase1");
+        heartImages = HealthPoints.GetComponentsInChildren<Image>();
+        currentHealth = heartImages.Length; 
+    }
     private void SaveData()
     {
         totalCollected += currentCoins;

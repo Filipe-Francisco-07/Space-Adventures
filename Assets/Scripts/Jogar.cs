@@ -28,7 +28,7 @@ public class Jogar : MonoBehaviour
             PlayerPrefs.SetString("playerName", playerName);
             PlayerPrefs.Save();
 
-            SceneManager.LoadScene("CenaFase1");
+            GerenciadorDeJogo.instance.StartGame();
         }
         else
         {
