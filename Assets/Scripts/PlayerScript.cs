@@ -20,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform firePoint; 
     private bool canShoot = true;
+    public GameObject orb;
 
     void Start()
     {
@@ -32,6 +33,12 @@ public class PlayerScript : MonoBehaviour
         Andar();
         Pular();
         Atirar();
+
+        Scene currentscene = SceneManager.GetActiveScene();
+        if (currentscene.name == "CenaPreBoss" && GerenciadorDeJogo.instance.orbCollected)
+        {
+            orb.SetActive(true);
+        }
     }
 
     void Andar()
@@ -45,6 +52,7 @@ public class PlayerScript : MonoBehaviour
             {
                 animacao.SetBool("jump", true);
                 animacao.SetBool("walk", false);
+                transform.localScale = new Vector3(1f, 1f, 1f); // Vira para a direita
             }
             else
             {
@@ -58,6 +66,7 @@ public class PlayerScript : MonoBehaviour
             {
                 animacao.SetBool("jump", true);
                 animacao.SetBool("walk", false);
+                transform.localScale = new Vector3(-1f, 1f, 1f); // Vira para a esquerda
             }
             else
             {
@@ -103,7 +112,7 @@ public class PlayerScript : MonoBehaviour
     void Atirar()
     {
         Scene currentscene = SceneManager.GetActiveScene();
-        if (currentscene.name == "CenaBoss" && canShoot)
+        if ((currentscene.name == "CenaBoss" || (currentscene.name == "CenaPreBoss" && GerenciadorDeJogo.instance.orbCollected)) && canShoot)
         {
             if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.F))
             {
@@ -118,7 +127,7 @@ public class PlayerScript : MonoBehaviour
 
     private IEnumerator ResetShoot()
     {
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.25f);
         canShoot = true;
     }
 
@@ -129,35 +138,40 @@ public class PlayerScript : MonoBehaviour
             pulando = false;
             animacao.SetBool("jump", false);
         }
-        if (collision.gameObject.layer == 10 && GerenciadorDeJogo.instance.currentCoins >= 500
+        if (collision.gameObject.layer == 10 //&& GerenciadorDeJogo.instance.currentCoins >= 500
         )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase1.2");
         }
-        if (collision.gameObject.layer == 11 && GerenciadorDeJogo.instance.currentCoins >= 500
+        if (collision.gameObject.layer == 11 //&& GerenciadorDeJogo.instance.currentCoins >= 500
         )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase1.3");
         }
-        if (collision.gameObject.layer == 12  && GerenciadorDeJogo.instance.currentCoins >= 600
+        if (collision.gameObject.layer == 12 //&& GerenciadorDeJogo.instance.currentCoins >= 600
         )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2");
         }
-        if (collision.gameObject.layer == 13 && GerenciadorDeJogo.instance.currentCoins >= 500
+        if (collision.gameObject.layer == 13 //&& GerenciadorDeJogo.instance.currentCoins >= 500
         )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2.2");
         }
-        if (collision.gameObject.layer == 14 && GerenciadorDeJogo.instance.currentCoins >= 700
+        if (collision.gameObject.layer == 14 //&& GerenciadorDeJogo.instance.currentCoins >= 700
         )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2.3");
         }
-        if (collision.gameObject.layer == 17)
+        if (collision.gameObject.layer == 17 && GerenciadorDeJogo.instance.orbCollected)
         {
             GerenciadorDeJogo.instance.ResetHealth();
             GerenciadorDeJogo.instance.TrocarCena("CenaBoss");
+        }
+        if (collision.gameObject.layer == 19 //&& GerenciadorDeJogo.instance.currentCoins >= 500
+        )
+        {
+            GerenciadorDeJogo.instance.TrocarCena("CenaPreBoss");
         }
     }
 

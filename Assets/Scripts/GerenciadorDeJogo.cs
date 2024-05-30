@@ -31,9 +31,14 @@ public class GerenciadorDeJogo : MonoBehaviour
     public TMP_Text NameStats;
     public TMP_Text CoinStats;
     public bool lookingStats;
+    public GameObject openChest;
+    public GameObject orbReceive;
+    public bool orbCollected;
+
 
     void Start()
     {
+        orbCollected = false;
         lookingStats= false;
         instance = this;
         block = false;
@@ -52,6 +57,11 @@ public class GerenciadorDeJogo : MonoBehaviour
                 HideStats();
             }
         }
+    }
+
+    public void CollectedOrb(){
+        orbCollected = true;
+        orbReceive.SetActive(false);
     }
 
     public void Pause(){
@@ -180,6 +190,7 @@ public class GerenciadorDeJogo : MonoBehaviour
                     TrocarCena("CenaFase1");   
                     ResetHealth(); 
                     ZerarCoins();
+                    BossLifebar.SetActive(false);
                 }else{
                     TrocarCena(nome); 
                 }
@@ -223,6 +234,7 @@ public class GerenciadorDeJogo : MonoBehaviour
             BossLifebar.SetActive(false);
             lastScene.SetActive(true);
             ShowLastMessage.text = ("CONGRATULATIONS "+PlayerPrefs.GetString("playerName")+", YOU BEATED THE GAME AND COLLECTED A TOTAL OF "+ PlayerPrefs.GetInt("totalCoins").ToString() + " MOON COINS, THAT'S AWESOME!");
+            orbCollected = false;
         }
         if(nomeCena == "CenaBoss"){
             BossLifebar.SetActive(true);  
