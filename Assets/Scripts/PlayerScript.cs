@@ -17,8 +17,9 @@ public class PlayerScript : MonoBehaviour
     private Animator animacao;
     private bool winding;
 
-    public GameObject projectilePrefab; // Prefab do projétil
-    public Transform firePoint; // Ponto de disparo
+    public GameObject projectilePrefab;
+    public Transform firePoint; 
+    private bool canShoot = true;
 
     void Start()
     {
@@ -102,14 +103,23 @@ public class PlayerScript : MonoBehaviour
     void Atirar()
     {
         Scene currentscene = SceneManager.GetActiveScene();
-        if(currentscene.name == "CenaBoss"){
-            if (Input.GetButtonDown("Fire1"))
+        if (currentscene.name == "CenaBoss" && canShoot)
+        {
+            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.F))
             {
                 Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
                 GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
                 projectile.GetComponent<Projectile>().SetDirection(direction);
+                canShoot = false;
+                StartCoroutine(ResetShoot());
+            }
         }
-        }
+    }
+
+    private IEnumerator ResetShoot()
+    {
+        yield return new WaitForSeconds(0.15f);
+        canShoot = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
