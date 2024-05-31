@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: eadb4a54442eaf14fbefcabd23596f23
   - enabled: 1
-    path: Assets/Scenes/CenaInicial.unity
-    guid: 93e402e520fdc8549a58027783a3e020
-  - enabled: 1
     path: Assets/Scenes/Cena01.unity
     guid: 51846a6054f373b4c92c8deb1708618d
+  - enabled: 1
+    path: Assets/Scenes/CenaPreInicial.unity
+    guid: e6574db592c326841bf98693dcfcc029
+  - enabled: 1
+    path: Assets/Scenes/CenaInicial.unity
+    guid: 93e402e520fdc8549a58027783a3e020
   - enabled: 1
     path: Assets/Scenes/CenaFase1.unity
     guid: 2cda990e2423bbf4892e6590ba056729

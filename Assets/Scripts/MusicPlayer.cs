@@ -11,6 +11,7 @@ public class MusicPlayer : MonoBehaviour
     public GameObject bosstheme;
     private string currentSceneName;
     private string currentThemeName;
+    private bool inicio;
 
     void Awake()
     {
@@ -30,6 +31,7 @@ public class MusicPlayer : MonoBehaviour
     {
         currentSceneName = SceneManager.GetActiveScene().name;
         UpdateMusic();
+        inicio = true;
     }
 
     void Update()
@@ -44,35 +46,26 @@ public class MusicPlayer : MonoBehaviour
 
     void UpdateMusic()
     {
-        if (IsMainThemeScene(currentSceneName))
+        if (currentSceneName == "CenaFase1")
         {
-            if (currentThemeName != "main")
-            {
+                StopAllMusic();
+                phasestheme.SetActive(true);
+
+        } else if (currentSceneName == "FasePreInicial"){
                 StopAllMusic();
                 maintheme.SetActive(true);
-                currentThemeName = "main";
-            }
+
         }
-        else if (IsPhaseThemeScene(currentSceneName))
-        {
-            if (currentThemeName != "phase")
-            {
-                if (currentThemeName != "phase")
-                {
-                    StopAllMusicExcept("phase");
-                }
-                phasestheme.SetActive(true);
-                currentThemeName = "phase";
+        else if (currentSceneName == "FaseInicial"){
+            if(!inicio){
+                StopAllMusic();
+                maintheme.SetActive(true);
+            }else{
+                inicio = false;
             }
-        }
-        else if (currentSceneName == "CenaBoss")
-        {
-            if (currentThemeName != "boss")
-            {
+        }else if (currentSceneName == "CenaBoss"){
                 StopAllMusic();
                 bosstheme.SetActive(true);
-                currentThemeName = "boss";
-            }
         }
     }
 
@@ -81,25 +74,5 @@ public class MusicPlayer : MonoBehaviour
         maintheme.SetActive(false);
         phasestheme.SetActive(false);
         bosstheme.SetActive(false);
-    }
-
-    void StopAllMusicExcept(string themeToKeep)
-    {
-        if (themeToKeep != "main")
-            maintheme.SetActive(false);
-        if (themeToKeep != "phase")
-            phasestheme.SetActive(false);
-        if (themeToKeep != "boss")
-            bosstheme.SetActive(false);
-    }
-
-    bool IsMainThemeScene(string sceneName)
-    {
-        return sceneName == "CenaInicial" || sceneName == "CenaFinal";
-    }
-
-    bool IsPhaseThemeScene(string sceneName)
-    {
-        return sceneName.StartsWith("CenaFase") || sceneName == "CenaPreBoss";
     }
 }

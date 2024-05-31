@@ -14,6 +14,6 @@ public class Scene2Skipper : MonoBehaviour
     {
         yield return new WaitForSeconds(2.3f);
 
-        SceneManager.LoadScene("CenaInicial");
+        SceneManager.LoadScene("CenaPreInicial");
     }
 }
