@@ -5,13 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class MusicPlayer : MonoBehaviour
 {
-    private static MusicPlayer instance = null;
+    public static MusicPlayer instance;
     public GameObject maintheme;
     public GameObject phasestheme;
     public GameObject bosstheme;
     private string currentSceneName;
     private string currentThemeName;
     private bool inicio;
+    private bool final;
+    public AudioSource jump;
+    public AudioSource orbShoot;
+    public AudioSource bossKilled;
+    public AudioSource phasePassed;
+    public AudioSource coin;
+    public AudioSource enemyDying;
+    public AudioSource playerDying;
+
+
 
     void Awake()
     {
@@ -29,9 +39,11 @@ public class MusicPlayer : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         currentSceneName = SceneManager.GetActiveScene().name;
         UpdateMusic();
         inicio = true;
+        final = false;
     }
 
     void Update()
@@ -48,24 +60,37 @@ public class MusicPlayer : MonoBehaviour
     {
         if (currentSceneName == "CenaFase1")
         {
-                StopAllMusic();
-                phasestheme.SetActive(true);
-
-        } else if (currentSceneName == "FasePreInicial"){
-                StopAllMusic();
-                maintheme.SetActive(true);
-
+            StopAllMusic();
+            phasestheme.SetActive(true);
         }
-        else if (currentSceneName == "FaseInicial"){
-            if(!inicio){
+        else if (currentSceneName == "CenaPreInicial")
+        {
+            StopAllMusic();
+            maintheme.SetActive(true);
+        }
+        else if (currentSceneName == "CenaInicial")
+        {
+            if (!inicio && !final)
+            {
                 StopAllMusic();
                 maintheme.SetActive(true);
-            }else{
-                inicio = false;
             }
-        }else if (currentSceneName == "CenaBoss"){
-                StopAllMusic();
-                bosstheme.SetActive(true);
+            else
+            {
+                inicio = false;
+                final = false;
+            }
+        }
+        else if (currentSceneName == "CenaBoss")
+        {
+            StopAllMusic();
+            bosstheme.SetActive(true);
+        }
+        else if (currentSceneName == "CenaFinal")
+        {
+            StopAllMusic();
+            maintheme.SetActive(true);
+            final = true;
         }
     }
 
@@ -74,5 +99,17 @@ public class MusicPlayer : MonoBehaviour
         maintheme.SetActive(false);
         phasestheme.SetActive(false);
         bosstheme.SetActive(false);
+    }
+
+    public void PlaySound(AudioSource audioSource)
+    {
+        audioSource.gameObject.SetActive(true);
+        audioSource.Play();
+    }
+
+    IEnumerator DisableAudioSource(AudioSource audioSource, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        audioSource.gameObject.SetActive(false);
     }
 }

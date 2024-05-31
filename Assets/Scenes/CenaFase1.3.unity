@@ -7237,10 +7237,10 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 519420032}
+  - {fileID: 844510816}
+  - {fileID: 1506998630}
   - {fileID: 1786450284}
   - {fileID: 505452580}
-  - {fileID: 844510816}
-  - {fileID: 519420032}
-  - {fileID: 1506998630}
   - {fileID: 472207733}
   - {fileID: 1156618543}

@@ -34,7 +34,10 @@ public class GerenciadorDeJogo : MonoBehaviour
     public GameObject openChest;
     public GameObject orbReceive;
     public bool orbCollected;
+    public bool isGameScene;
+    private string currentSceneName = "";
 
+    private bool playerDied = false;
 
     void Start()
     {
@@ -46,7 +49,13 @@ public class GerenciadorDeJogo : MonoBehaviour
         LoadData();
     }
     void Update(){
-        if(!paused){
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        isGameScene = currentScene.name.StartsWith("CenaFase") || 
+                           currentScene.name == "CenaPreBoss" || 
+                           currentScene.name == "CenaBoss";
+
+        if(!paused && isGameScene){
             if(Input.GetKeyDown(KeyCode.Escape)){
                 Pause();
             }
@@ -102,7 +111,6 @@ public class GerenciadorDeJogo : MonoBehaviour
 
     public void MainMenu(){
         Scene currentScene = SceneManager.GetActiveScene();
-        TrocarCena(currentScene.name);
         GameInterface.SetActive(false);
         BossLifebar.SetActive(false);
         lastScene.SetActive(false);
@@ -134,7 +142,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         if(currentScene.name == "CenaFinal"){
             lastScene.SetActive(true);
-        } else{
+        } else if(isGameScene){
             Pause();
         }
     }
@@ -164,6 +172,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         collectedCoins += 5000;
         UpdateCoins();
         SaveData();
+        MusicPlayer.instance.PlaySound(MusicPlayer.instance.bossKilled);
     }
 
     public void ResetLevelCoins()
@@ -180,6 +189,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     }
     public void KillPlayer(Collider2D player,string nome){
         if(!block){
+            MusicPlayer.instance.PlaySound(MusicPlayer.instance.playerDying);
             if(currentHealth > 0){
                 currentHealth --;
                 heartImages[currentHealth].enabled = false;
@@ -187,11 +197,13 @@ public class GerenciadorDeJogo : MonoBehaviour
                 block = true;
                 ResetLevelCoins();
                 if(currentHealth == 0){
+                    playerDied = true;
                     TrocarCena("CenaFase1");   
                     ResetHealth(); 
                     ZerarCoins();
                     BossLifebar.SetActive(false);
                 }else{
+                    playerDied = true;
                     TrocarCena(nome); 
                 }
         }
@@ -227,8 +239,12 @@ public class GerenciadorDeJogo : MonoBehaviour
     }
    public void TrocarCena(string nomeCena)
     {
-         SceneManager.LoadScene(nomeCena);
-         
+        if(nomeCena == "CenaInicial"){
+            GameInterface.SetActive(false);
+            BossLifebar.SetActive(false);
+            lastScene.SetActive(false);
+            orbCollected = false;
+        }
         if(nomeCena=="CenaFinal"){
             GameInterface.SetActive(false);
             BossLifebar.SetActive(false);
@@ -251,9 +267,23 @@ public class GerenciadorDeJogo : MonoBehaviour
             bossHealth = 1000;
         }
 
+        if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal"))
+        {
+            string newSceneName = SceneManager.GetActiveScene().name;
+            if (newSceneName != currentSceneName)
+            {
+                MusicPlayer.instance.PlaySound(MusicPlayer.instance.phasePassed);
+            }
+            currentSceneName = newSceneName;
+        }
+
+        playerDied = false;
+
         block = false;
         SaveData();
         currentCoins = 0;
+
+        SceneManager.LoadScene(nomeCena);
 
     }
      public void StartGame()

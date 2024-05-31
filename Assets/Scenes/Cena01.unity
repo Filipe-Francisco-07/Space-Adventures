@@ -225,7 +225,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: b811fed15bca5504ba5b0b08f3c00c08, type: 3}
       propertyPath: m_Name
-      value: Anim2
+      value: MonitorCena01
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: b811fed15bca5504ba5b0b08f3c00c08, type: 3}
       propertyPath: m_LocalScale.x
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 694186342}
   - component: {fileID: 694186343}
   m_Layer: 0
-  m_Name: Object
+  m_Name: Scene01Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

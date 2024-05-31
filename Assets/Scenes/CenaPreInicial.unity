@@ -688,10 +688,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7eb9878d0371004090fa731d44f2fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 200
+  scrollSpeed: 800
   textPanel: {fileID: 921424578}
   monitorImage: {fileID: 33909304}
-  nextSceneName: CenaInicial
 --- !u!114 &921424580
 MonoBehaviour:
   m_ObjectHideFlags: 0

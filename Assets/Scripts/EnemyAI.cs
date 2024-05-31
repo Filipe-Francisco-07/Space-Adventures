@@ -59,6 +59,7 @@ public class EnemyAI : MonoBehaviour
                 colisao.gameObject.GetComponent<Rigidbody2D>().AddForce( Vector2.up * 10, ForceMode2D.Impulse);  
                 velocidade = 0;
                 Destroy(gameObject,0.25f);
+                MusicPlayer.instance.PlaySound(MusicPlayer.instance.enemyDying);
             }else{
                 Scene currentscene = SceneManager.GetActiveScene();
                 GerenciadorDeJogo.instance.KillPlayer(colisao.collider,currentscene.name.ToString());

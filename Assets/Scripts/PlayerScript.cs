@@ -97,6 +97,7 @@ public class PlayerScript : MonoBehaviour
                 rb.AddForce(new Vector2(0f, jump), ForceMode2D.Impulse);
                 jumpDuplo = true;
                 animacao.SetBool("jump", true);
+                MusicPlayer.instance.PlaySound(MusicPlayer.instance.jump);
             }
             else
             {
@@ -104,6 +105,7 @@ public class PlayerScript : MonoBehaviour
                 {
                     rb.AddForce(new Vector2(0f, jump), ForceMode2D.Impulse);
                     jumpDuplo = false;
+                    MusicPlayer.instance.PlaySound(MusicPlayer.instance.jump);
                 }
             }
         }
@@ -112,7 +114,7 @@ public class PlayerScript : MonoBehaviour
     void Atirar()
     {
         Scene currentscene = SceneManager.GetActiveScene();
-        if ((currentscene.name == "CenaBoss" || (currentscene.name == "CenaPreBoss" && GerenciadorDeJogo.instance.orbCollected)) && canShoot)
+        if (((currentscene.name == "CenaBoss" || (currentscene.name == "CenaPreBoss") && GerenciadorDeJogo.instance.orbCollected)) && canShoot)
         {
             if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.F))
             {
@@ -127,6 +129,7 @@ public class PlayerScript : MonoBehaviour
 
     private IEnumerator ResetShoot()
     {
+        MusicPlayer.instance.PlaySound(MusicPlayer.instance.orbShoot);
         yield return new WaitForSeconds(0.25f);
         canShoot = true;
     }
