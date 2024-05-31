@@ -36,9 +36,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     public bool orbCollected;
     public bool isGameScene;
     private string currentSceneName = "";
-
     private bool playerDied = false;
-
     void Start()
     {
         orbCollected = false;
@@ -68,19 +66,22 @@ public class GerenciadorDeJogo : MonoBehaviour
         }
     }
 
-    public void CollectedOrb(){
+    public void CollectedOrb()
+    {
         orbCollected = true;
         orbReceive.SetActive(false);
     }
 
-    public void Pause(){
+    public void Pause()
+    {
         Time.timeScale = 0;
         pause.SetActive(true);
         BossLifebar.SetActive(false);
         paused = true; 
     }
 
-    public void Resume(){
+    public void Resume()
+    {
         pause.SetActive(false);
         Scene currentScene = SceneManager.GetActiveScene();
         if(currentScene.name == "CenaBoss"){
@@ -90,7 +91,8 @@ public class GerenciadorDeJogo : MonoBehaviour
         paused = false;
     }
 
-     public void Restart(){
+     public void Restart()
+     {
         currentHealth --;
         Scene currentScene = SceneManager.GetActiveScene();
         TrocarCena(currentScene.name);
@@ -99,7 +101,8 @@ public class GerenciadorDeJogo : MonoBehaviour
         paused = false;
     }
 
-     public void TotalRestart(){
+    public void TotalRestart()
+    {
         SaveData();
         ZerarCoins();
         ResetHealth();
@@ -109,7 +112,8 @@ public class GerenciadorDeJogo : MonoBehaviour
         lastScene.SetActive(false);
     }
 
-    public void MainMenu(){
+    public void MainMenu()
+    {
         Scene currentScene = SceneManager.GetActiveScene();
         GameInterface.SetActive(false);
         BossLifebar.SetActive(false);
@@ -117,17 +121,20 @@ public class GerenciadorDeJogo : MonoBehaviour
         SaveData();
         ZerarCoins();
         ResetHealth();
-        if(currentScene.name != "CenaFinal"){
-            Resume();
+        if (currentScene.name != "CenaFinal")
+        {
+           Resume();
         }
         TrocarCena("CenaInicial");
     }
 
-    public void EndStats(){
+        public void EndStats()
+    {
         lastScene.SetActive(false);
         ShowStats();
     }
-    public void ShowStats(){
+    public void ShowStats()
+    {
         Resume();
         Time.timeScale = 0;
         playerStats.SetActive(true);
@@ -135,7 +142,8 @@ public class GerenciadorDeJogo : MonoBehaviour
         CoinStats.text = PlayerPrefs.GetInt("totalCoins").ToString();
         lookingStats = true;
     }
-    public void HideStats(){
+    public void HideStats()
+    {
         Time.timeScale = 1;
         playerStats.SetActive(false);
         lookingStats = false;
@@ -147,7 +155,8 @@ public class GerenciadorDeJogo : MonoBehaviour
         }
     }
 
-    public void ExitGame(){
+    public void ExitGame()
+    {
         Application.Quit();
     }
     private void Awake()
@@ -187,7 +196,8 @@ public class GerenciadorDeJogo : MonoBehaviour
         totalCoins = 0;
         showCoins.text = totalCoins.ToString();
     }
-    public void KillPlayer(Collider2D player,string nome){
+    public void KillPlayer(Collider2D player,string nome)
+    {
         if(!block){
             MusicPlayer.instance.PlaySound(MusicPlayer.instance.playerDying);
             if(currentHealth > 0){
@@ -219,15 +229,16 @@ public class GerenciadorDeJogo : MonoBehaviour
     }
 
     public void ResetHealth()
-{
-    currentHealth = heartImages.Length;
-    foreach (var heart in heartImages)
     {
-        heart.enabled = true;
+        currentHealth = heartImages.Length;
+        foreach (var heart in heartImages)
+        {
+            heart.enabled = true;
+        }
     }
-}
 
-    public void BossHit(){
+    public void BossHit()
+    {
         bossHealth -= 30;
         if(bossHealth <= 0){
             healthSlider.value = 0;
@@ -237,8 +248,10 @@ public class GerenciadorDeJogo : MonoBehaviour
         showBossHP.text = bossHealth.ToString();
         }
     }
-   public void TrocarCena(string nomeCena)
+    public void TrocarCena(string nomeCena)
     {
+        SceneManager.LoadScene(nomeCena);
+
         if(nomeCena == "CenaInicial"){
             GameInterface.SetActive(false);
             BossLifebar.SetActive(false);
@@ -283,8 +296,6 @@ public class GerenciadorDeJogo : MonoBehaviour
         SaveData();
         currentCoins = 0;
 
-        SceneManager.LoadScene(nomeCena);
-
     }
      public void StartGame()
     {
@@ -312,5 +323,4 @@ public class GerenciadorDeJogo : MonoBehaviour
         ResetLevelCoins();
         LoadData();
     }
-
 }

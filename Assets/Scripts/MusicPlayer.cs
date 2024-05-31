@@ -21,8 +21,6 @@ public class MusicPlayer : MonoBehaviour
     public AudioSource enemyDying;
     public AudioSource playerDying;
 
-
-
     void Awake()
     {
         if (instance == null)
