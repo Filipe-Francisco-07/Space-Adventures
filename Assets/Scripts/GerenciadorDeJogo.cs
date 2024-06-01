@@ -17,7 +17,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     private Image[] heartImages;
     private bool block;
     private int totalCollected;
-    public int bossHealth = 1000;
+    public int bossHealth = 10;
     private int currentBossHP; 
     public Slider healthSlider;
     public TMP_Text showBossHP;
@@ -49,19 +49,22 @@ public class GerenciadorDeJogo : MonoBehaviour
     void Update(){
         Scene currentScene = SceneManager.GetActiveScene();
 
-        isGameScene = currentScene.name.StartsWith("CenaFase") || 
-                           currentScene.name == "CenaPreBoss" || 
-                           currentScene.name == "CenaBoss";
-
-        if(!paused && isGameScene){
+        isGameScene = currentScene.name.StartsWith("CenaFase") || currentScene.name == "CenaPreBoss" ||  currentScene.name == "CenaBoss";
+        
+        if(isGameScene && !paused){
             if(Input.GetKeyDown(KeyCode.Escape)){
                 Pause();
             }
-        }else{
+        }else if(paused){
             if(Input.GetKeyDown(KeyCode.Escape) && !lookingStats){
                 Resume();
-            } else{
+            }else if(lookingStats){
                 HideStats();
+            }
+        }else if(currentScene.name == "CenaFinal" && lookingStats){
+            if(Input.GetKeyDown(KeyCode.Escape)){
+                HideStats();
+                lastScene.SetActive(true);
             }
         }
     }
@@ -82,6 +85,7 @@ public class GerenciadorDeJogo : MonoBehaviour
 
     public void Resume()
     {
+        Debug.Log("Resume");
         pause.SetActive(false);
         Scene currentScene = SceneManager.GetActiveScene();
         if(currentScene.name == "CenaBoss"){
@@ -252,12 +256,6 @@ public class GerenciadorDeJogo : MonoBehaviour
     {
         SceneManager.LoadScene(nomeCena);
 
-        if(nomeCena == "CenaInicial"){
-            GameInterface.SetActive(false);
-            BossLifebar.SetActive(false);
-            lastScene.SetActive(false);
-            orbCollected = false;
-        }
         if(nomeCena=="CenaFinal"){
             GameInterface.SetActive(false);
             BossLifebar.SetActive(false);
@@ -277,7 +275,7 @@ public class GerenciadorDeJogo : MonoBehaviour
          if(nomeCena == "CenaFase1"){
             totalCoins = 0;
             GameInterface.SetActive(true);
-            bossHealth = 1000;
+            bossHealth = 10;
         }
 
         if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal"))
