@@ -37,8 +37,13 @@ public class GerenciadorDeJogo : MonoBehaviour
     public bool isGameScene;
     private string currentSceneName = "";
     private bool playerDied = false;
+    public GameObject Lunaris2;
+    public GameObject enterLunaris;
+    public GameObject irFinal;
+    public bool zerou;
     void Start()
     {
+        zerou = false;
         orbCollected = false;
         lookingStats= false;
         instance = this;
@@ -114,6 +119,8 @@ public class GerenciadorDeJogo : MonoBehaviour
         GameInterface.SetActive(true);
         BossLifebar.SetActive(false);
         lastScene.SetActive(false);
+        orbCollected = false;
+        zerou = false;
     }
 
     public void MainMenu()
@@ -122,6 +129,8 @@ public class GerenciadorDeJogo : MonoBehaviour
         GameInterface.SetActive(false);
         BossLifebar.SetActive(false);
         lastScene.SetActive(false);
+        orbCollected = false;
+        zerou = false;
         SaveData();
         ZerarCoins();
         ResetHealth();
@@ -185,7 +194,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         collectedCoins += 5000;
         UpdateCoins();
         SaveData();
-        MusicPlayer.instance.PlaySound(MusicPlayer.instance.bossKilled);
+        zerou = true;
     }
 
     public void ResetLevelCoins()
@@ -259,9 +268,9 @@ public class GerenciadorDeJogo : MonoBehaviour
         if(nomeCena=="CenaFinal"){
             GameInterface.SetActive(false);
             BossLifebar.SetActive(false);
-            lastScene.SetActive(true);
+            Lunaris2.SetActive(true);
+            lastScene.SetActive(false);
             ShowLastMessage.text = ("CONGRATULATIONS "+PlayerPrefs.GetString("playerName")+", YOU BEATED THE GAME AND COLLECTED A TOTAL OF "+ PlayerPrefs.GetInt("totalCoins").ToString() + " MOON COINS, THAT'S AWESOME!");
-            orbCollected = false;
         }
         if(nomeCena == "CenaBoss"){
             BossLifebar.SetActive(true);  

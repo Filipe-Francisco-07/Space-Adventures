@@ -114,7 +114,7 @@ public class PlayerScript : MonoBehaviour
     void Atirar()
     {
         Scene currentscene = SceneManager.GetActiveScene();
-        if (((currentscene.name == "CenaBoss" || (currentscene.name == "CenaPreBoss") && GerenciadorDeJogo.instance.orbCollected)) && canShoot)
+        if (((currentscene.name == "CenaBoss" || (currentscene.name == "CenaPreBoss" || currentscene.name == "CenaFinal") && GerenciadorDeJogo.instance.orbCollected)) && canShoot)
         {
             if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.F))
             {
@@ -175,6 +175,11 @@ public class PlayerScript : MonoBehaviour
         )
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaPreBoss");
+        }
+         if (collision.gameObject.layer == 20)
+        {
+            GerenciadorDeJogo.instance.TrocarCena("CenaFinal");
+            GerenciadorDeJogo.instance.irFinal.SetActive(false);
         }
     }
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f1382184f71026489d3b79192ac6772
+guid: 9054935ba5c47254cb3d3324bdecbdbf
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,9 +121,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Lunaris07-Scene1_Frame_0
+  - name: 2Idle_Lunaris
     originalName: 
-    pivot: {x: 0.50445104, y: -0.21383649}
+    pivot: {x: 0.74183977, y: -0.12578616}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 337
       height: 318
-    spriteID: cbf2f31dfdc3d69448c68b2573f2dac4
+    spriteID: 2849687f50fe5ad458652175e4339816
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,55 +141,27 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Lunaris07-Scene1_Frame_1
-    originalName: 
-    pivot: {x: 0.50445104, y: -0.21383649}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 330
-      width: 337
-      height: 318
-    spriteID: e6b7c385ce3dd15459b337ea2369c85c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 330}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1994423539
-    name: Lunaris07-Scene1
+    guid: 440007123
+    name: 2Idle_Lunaris
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Lunaris07-Scene1_Frame_0
+    - name: 2Idle_Lunaris
       frameIndex: 0
       cellRect:
-        x: 80
-        y: 68
+        x: 0
+        y: 40
         width: 337
         height: 318
-      spriteId: cbf2f31dfdc3d69448c68b2573f2dac4
-    - name: Lunaris07-Scene1_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 80
-        y: 68
-        width: 337
-        height: 318
-      spriteId: e6b7c385ce3dd15459b337ea2369c85c
+      spriteId: 2849687f50fe5ad458652175e4339816
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 500, y: 500}
+  canvasSize: {x: 500, y: 1000}

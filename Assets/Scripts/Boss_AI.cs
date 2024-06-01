@@ -36,12 +36,13 @@ public class Boss_AI : MonoBehaviour
             }
         }
 
-        if (GerenciadorDeJogo.instance.bossHealth <= 0)
+        if (GerenciadorDeJogo.instance.bossHealth <= 0 && !GerenciadorDeJogo.instance.zerou)
         {
             Destroy(gameObject, 0.5f);
             GerenciadorDeJogo.instance.BossKiller();
             StartCoroutine(Esperar());
-            GerenciadorDeJogo.instance.TrocarCena("CenaFinal");
+            GerenciadorDeJogo.instance.irFinal.SetActive(true);
+            GerenciadorDeJogo.instance.BossLifebar.SetActive(false);
             return;
         }
 
