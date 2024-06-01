@@ -1,0 +1,839 @@
+fileFormatVersion: 2
+guid: 0f119d09feb3efa448c1f2c5b556c3b6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: LunarisS07-Scene2_Frame_0
+    originalName: 
+    pivot: {x: 0.74183977, y: -0.12578616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1037
+      y: 1499
+      width: 337
+      height: 318
+    spriteID: 182ecb815e6c80b47a946166ae11e8f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1037, y: 1499}
+  - name: LunarisS07-Scene2_Frame_1
+    originalName: 
+    pivot: {x: 0.74183977, y: -0.03468208}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1037
+      y: 1145
+      width: 337
+      height: 346
+    spriteID: 78b41001d1b888944ada0af613c41b02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1037, y: 1145}
+  - name: LunarisS07-Scene2_Frame_2
+    originalName: 
+    pivot: {x: 0.74626863, y: -0.08033241}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 694
+      y: 804
+      width: 335
+      height: 361
+    spriteID: 3197d9655e05ef147ad945a6f6d5fb3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 694, y: 804}
+  - name: LunarisS07-Scene2_Frame_3
+    originalName: 
+    pivot: {x: 0.74183977, y: -0.10761155}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1037
+      y: 398
+      width: 337
+      height: 381
+    spriteID: 3242d16fbc087d24b881a93758bc2a68
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1037, y: 398}
+  - name: LunarisS07-Scene2_Frame_4
+    originalName: 
+    pivot: {x: 0.74183977, y: -0.15228426}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 349
+      y: 4
+      width: 337
+      height: 394
+    spriteID: 60c6ffccfaec50c48b12aef13bdea908
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 349, y: 4}
+  - name: LunarisS07-Scene2_Frame_5
+    originalName: 
+    pivot: {x: 0.74183977, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 337
+      height: 396
+    spriteID: 677f1d988d8e485429d4f72b7cd3074e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: LunarisS07-Scene2_Frame_6
+    originalName: 
+    pivot: {x: 0.74183977, y: -0.3239796}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 349
+      y: 406
+      width: 337
+      height: 392
+    spriteID: 94ce8eac20dd3e448a2ee3ed22f60ad4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 349, y: 406}
+  - name: LunarisS07-Scene2_Frame_7
+    originalName: 
+    pivot: {x: 0.74183977, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 408
+      width: 337
+      height: 396
+    spriteID: 2283e74960cd7a94793eca1b1d4963cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 408}
+  - name: LunarisS07-Scene2_Frame_8
+    originalName: 
+    pivot: {x: 0.74626863, y: -0.5280612}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 349
+      y: 806
+      width: 335
+      height: 392
+    spriteID: 08652acc9df4edc48a03ff4344128c17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 349, y: 806}
+  - name: LunarisS07-Scene2_Frame_9
+    originalName: 
+    pivot: {x: 0.74183977, y: -0.63131315}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 812
+      width: 337
+      height: 396
+    spriteID: 91ce5ad15f288804b98f4793c4708480
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 812}
+  - name: LunarisS07-Scene2_Frame_10
+    originalName: 
+    pivot: {x: 0.74626863, y: -0.7704081}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 349
+      y: 1206
+      width: 335
+      height: 392
+    spriteID: 9b3bbba451c0e964fac37c2716b76a72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 349, y: 1206}
+  - name: LunarisS07-Scene2_Frame_11
+    originalName: 
+    pivot: {x: 0.74183977, y: -0.89637303}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1037
+      y: 4
+      width: 337
+      height: 386
+    spriteID: d0bf452589984744196184453fecd5c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1037, y: 4}
+  - name: LunarisS07-Scene2_Frame_12
+    originalName: 
+    pivot: {x: 0.74626863, y: -1.0153061}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 349
+      y: 1606
+      width: 335
+      height: 392
+    spriteID: 7c0c8d557dfcd864b98f5464e9a3fb11
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 349, y: 1606}
+  - name: LunarisS07-Scene2_Frame_13
+    originalName: 
+    pivot: {x: 0.74183977, y: -1.1161617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1216
+      width: 337
+      height: 396
+    spriteID: 3e00989ab4a2642499c2267a165b433f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1216}
+  - name: LunarisS07-Scene2_Frame_14
+    originalName: 
+    pivot: {x: 0.74626863, y: -1.2602041}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 694
+      y: 4
+      width: 335
+      height: 392
+    spriteID: 828b8f58cde510b4a98a571252cc85e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 694, y: 4}
+  - name: LunarisS07-Scene2_Frame_15
+    originalName: 
+    pivot: {x: 0.74404764, y: -1.39899}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1620
+      width: 336
+      height: 396
+    spriteID: 5a656950b8c05944680fa0dfe0619f38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1620}
+  - name: LunarisS07-Scene2_Frame_16
+    originalName: 
+    pivot: {x: 0.74328357, y: -1.5459183}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 694
+      y: 404
+      width: 335
+      height: 392
+    spriteID: a3117ecebc9fcac47b20ca05c671778a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 694, y: 404}
+  - name: LunarisS07-Scene2_Frame_17
+    originalName: 
+    pivot: {x: 0.74183977, y: -1.8571428}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1037
+      y: 787
+      width: 337
+      height: 350
+    spriteID: 23f6da5dacc66cf4aaa3aa36dcad9ff7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1037, y: 787}
+  - name: LunarisS07-Scene2_Frame_18
+    originalName: 
+    pivot: {x: 0.74626863, y: -2.3557048}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 694
+      y: 1173
+      width: 335
+      height: 298
+    spriteID: d466f0f46adc6f4478795f4ba20cd706
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 694, y: 1173}
+  - name: LunarisS07-Scene2_Frame_19
+    originalName: 
+    pivot: {x: 0.74183977, y: -2.937008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 4
+      width: 337
+      height: 254
+    spriteID: 5364250a07e96de47a80ab179dd98c1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 4}
+  - name: LunarisS07-Scene2_Frame_20
+    originalName: 
+    pivot: {x: 0.74626863, y: -3.950495}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1037
+      y: 1825
+      width: 335
+      height: 202
+    spriteID: 3b895d2b2e4b8fd4b93c63cdca82c026
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1037, y: 1825}
+  - name: LunarisS07-Scene2_Frame_21
+    originalName: 
+    pivot: {x: 0.74183977, y: -5.329114}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 266
+      width: 337
+      height: 158
+    spriteID: a93b5a57a09f69b4480ee0089ea0a911
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 266}
+  - name: LunarisS07-Scene2_Frame_22
+    originalName: 
+    pivot: {x: 0.74626863, y: -8.433962}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 694
+      y: 1479
+      width: 335
+      height: 106
+    spriteID: 6e6b8232064d4124eb045a78edf256b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 694, y: 1479}
+  - name: LunarisS07-Scene2_Frame_23
+    originalName: 
+    pivot: {x: 1.2432432, y: -13.185714}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1727
+      y: 4
+      width: 111
+      height: 70
+    spriteID: 017ffa45c4fc0e14cb6cfcd065f5068a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1727, y: 4}
+  - name: LunarisS07-Scene2_Frame_24
+    originalName: 
+    pivot: {x: 1.0851064, y: -61.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1846
+      y: 4
+      width: 94
+      height: 16
+    spriteID: 83ef203f12cb31d4691a37609e3c28f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1846, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 170729923
+    name: LunarisS07-Scene2
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: LunarisS07-Scene2_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 40
+        width: 337
+        height: 318
+      spriteId: 182ecb815e6c80b47a946166ae11e8f9
+    - name: LunarisS07-Scene2_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 12
+        width: 337
+        height: 346
+      spriteId: 78b41001d1b888944ada0af613c41b02
+    - name: LunarisS07-Scene2_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 29
+        width: 335
+        height: 361
+      spriteId: 3197d9655e05ef147ad945a6f6d5fb3b
+    - name: LunarisS07-Scene2_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 41
+        width: 337
+        height: 381
+      spriteId: 3242d16fbc087d24b881a93758bc2a68
+    - name: LunarisS07-Scene2_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 60
+        width: 337
+        height: 394
+      spriteId: 60c6ffccfaec50c48b12aef13bdea908
+    - name: LunarisS07-Scene2_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 90
+        width: 337
+        height: 396
+      spriteId: 677f1d988d8e485429d4f72b7cd3074e
+    - name: LunarisS07-Scene2_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 127
+        width: 337
+        height: 392
+      spriteId: 94ce8eac20dd3e448a2ee3ed22f60ad4
+    - name: LunarisS07-Scene2_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 154
+        width: 337
+        height: 396
+      spriteId: 2283e74960cd7a94793eca1b1d4963cb
+    - name: LunarisS07-Scene2_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 207
+        width: 335
+        height: 392
+      spriteId: 08652acc9df4edc48a03ff4344128c17
+    - name: LunarisS07-Scene2_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 250
+        width: 337
+        height: 396
+      spriteId: 91ce5ad15f288804b98f4793c4708480
+    - name: LunarisS07-Scene2_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 302
+        width: 335
+        height: 392
+      spriteId: 9b3bbba451c0e964fac37c2716b76a72
+    - name: LunarisS07-Scene2_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 346
+        width: 337
+        height: 386
+      spriteId: d0bf452589984744196184453fecd5c8
+    - name: LunarisS07-Scene2_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 398
+        width: 335
+        height: 392
+      spriteId: 7c0c8d557dfcd864b98f5464e9a3fb11
+    - name: LunarisS07-Scene2_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: 442
+        width: 337
+        height: 396
+      spriteId: 3e00989ab4a2642499c2267a165b433f
+    - name: LunarisS07-Scene2_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: 494
+        width: 335
+        height: 392
+      spriteId: 828b8f58cde510b4a98a571252cc85e7
+    - name: LunarisS07-Scene2_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: 554
+        width: 336
+        height: 396
+      spriteId: 5a656950b8c05944680fa0dfe0619f38
+    - name: LunarisS07-Scene2_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 1
+        y: 606
+        width: 335
+        height: 392
+      spriteId: a3117ecebc9fcac47b20ca05c671778a
+    - name: LunarisS07-Scene2_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 0
+        y: 650
+        width: 337
+        height: 350
+      spriteId: 23f6da5dacc66cf4aaa3aa36dcad9ff7
+    - name: LunarisS07-Scene2_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 0
+        y: 702
+        width: 335
+        height: 298
+      spriteId: d466f0f46adc6f4478795f4ba20cd706
+    - name: LunarisS07-Scene2_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 0
+        y: 746
+        width: 337
+        height: 254
+      spriteId: 5364250a07e96de47a80ab179dd98c1c
+    - name: LunarisS07-Scene2_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: 798
+        width: 335
+        height: 202
+      spriteId: 3b895d2b2e4b8fd4b93c63cdca82c026
+    - name: LunarisS07-Scene2_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 0
+        y: 842
+        width: 337
+        height: 158
+      spriteId: a93b5a57a09f69b4480ee0089ea0a911
+    - name: LunarisS07-Scene2_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 0
+        y: 894
+        width: 335
+        height: 106
+      spriteId: 6e6b8232064d4124eb045a78edf256b9
+    - name: LunarisS07-Scene2_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 112
+        y: 923
+        width: 111
+        height: 70
+      spriteId: 017ffa45c4fc0e14cb6cfcd065f5068a
+    - name: LunarisS07-Scene2_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 148
+        y: 984
+        width: 94
+        height: 16
+      spriteId: 83ef203f12cb31d4691a37609e3c28f9
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 500, y: 1000}
