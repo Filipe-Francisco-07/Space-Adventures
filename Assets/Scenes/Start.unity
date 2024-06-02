@@ -2336,6 +2336,10 @@ MonoBehaviour:
   enterLunaris: {fileID: 2075867242}
   irFinal: {fileID: 80838515}
   zerou: 0
+  character: 
+  maleCharacterPrefab: {fileID: 2579669766355416247, guid: 05b0982f58c41a44489b6e6bdde779f5, type: 3}
+  femaleCharacterPrefab: {fileID: 352595066604246444, guid: f8808ff150db7b149815975dc9210a44, type: 3}
+  spawnPoint: {fileID: 0}
 --- !u!4 &324601434
 Transform:
   m_ObjectHideFlags: 0

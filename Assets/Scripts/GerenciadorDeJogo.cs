@@ -41,6 +41,10 @@ public class GerenciadorDeJogo : MonoBehaviour
     public GameObject enterLunaris;
     public GameObject irFinal;
     public bool zerou;
+    public string character;
+    public GameObject maleCharacterPrefab;
+    public GameObject femaleCharacterPrefab;
+    public Transform spawnPoint;
     void Start()
     {
         zerou = false;
@@ -87,7 +91,6 @@ public class GerenciadorDeJogo : MonoBehaviour
         BossLifebar.SetActive(false);
         paused = true; 
     }
-
     public void Resume()
     {
         pause.SetActive(false);
