@@ -44,9 +44,12 @@ public class GerenciadorDeJogo : MonoBehaviour
     public string character;
     public GameObject maleCharacterPrefab;
     public GameObject femaleCharacterPrefab;
-    public Transform spawnPoint;
+    private GameObject currentCharacter;
+    private string selectedCharacter;
+
     void Start()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
         zerou = false;
         orbCollected = false;
         lookingStats= false;
@@ -58,8 +61,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     void Update(){
         Scene currentScene = SceneManager.GetActiveScene();
 
-        isGameScene = currentScene.name.StartsWith("CenaFase") || currentScene.name == "CenaPreBoss" ||  currentScene.name == "CenaBoss";
-        
+        isGameScene = currentScene.name.StartsWith("CenaFase") || currentScene.name == "CenaPreBoss" ||  currentScene.name == "CenaBoss" || (currentScene.name == "CenaFinal" && !Lunaris2Trigger.entrouNave);
         if(isGameScene && !paused){
             if(Input.GetKeyDown(KeyCode.Escape)){
                 Pause();
@@ -82,6 +84,10 @@ public class GerenciadorDeJogo : MonoBehaviour
     {
         orbCollected = true;
         orbReceive.SetActive(false);
+        if (currentCharacter != null)
+        {
+            ActivateOrb(currentCharacter, orbCollected);
+        }
     }
 
     public void Pause()
@@ -141,6 +147,7 @@ public class GerenciadorDeJogo : MonoBehaviour
            Resume();
         }
         TrocarCena("CenaInicial");
+        selectedCharacter="";
     }
 
         public void EndStats()
@@ -312,6 +319,53 @@ public class GerenciadorDeJogo : MonoBehaviour
         TrocarCena("CenaFase1");
         heartImages = HealthPoints.GetComponentsInChildren<Image>();
         currentHealth = heartImages.Length; 
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.name.StartsWith("CenaFase") || scene.name == "CenaPreBoss" ||  scene.name == "CenaBoss" || (scene.name == "CenaFinal" && !Lunaris2Trigger.entrouNave)){
+            selectedCharacter = PlayerPrefs.GetString("character");
+            InstantiateCharacter(selectedCharacter);
+        }
+    }
+
+    private Transform FindSpawnPoint()
+    {
+        GameObject spawnPoint = GameObject.FindWithTag("SpawnPoint");
+        if (spawnPoint != null)
+        {
+            return spawnPoint.transform;
+        }
+        else
+        {
+            return null;
+        }
+    }
+    public void InstantiateCharacter(string characterName)
+    {
+        Transform spawnPoint = FindSpawnPoint();
+
+        if (spawnPoint != null)
+        {
+            if (characterName == "male")
+            {
+                currentCharacter = Instantiate(maleCharacterPrefab, spawnPoint.position, spawnPoint.rotation);
+            }
+            else if (characterName == "female")
+            {
+                currentCharacter = Instantiate(femaleCharacterPrefab, spawnPoint.position, spawnPoint.rotation);
+            }
+        }
+
+        ActivateOrb(currentCharacter, orbCollected);
+    }
+
+     public void ActivateOrb(GameObject character, bool isActive)
+    {
+        Transform orbTransform = character.transform.Find("orb");
+        if (orbTransform != null)
+        {
+            orbTransform.gameObject.SetActive(isActive);
+        }
     }
     private void SaveData()
     {

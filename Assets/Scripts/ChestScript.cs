@@ -11,6 +11,7 @@ public class ChestScript : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E)){
                 GerenciadorDeJogo.instance.openChest.SetActive(false);
                 GerenciadorDeJogo.instance.orbReceive.SetActive(true);
+                GerenciadorDeJogo.instance.CollectedOrb();
                 entered = true;
             }
         }

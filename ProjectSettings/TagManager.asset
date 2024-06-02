@@ -12,6 +12,7 @@ TagManager:
   - Voador_Vertical
   - FadeBlackToTransparent
   - Enemy
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

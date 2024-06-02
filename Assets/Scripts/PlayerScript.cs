@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class PlayerScript : MonoBehaviour
 {
     public int coins;
@@ -16,11 +15,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] int velocidade = 5;
     private Animator animacao;
     private bool winding;
-
     public GameObject projectilePrefab;
     public Transform firePoint; 
     private bool canShoot = true;
-    public GameObject orb;
 
     void Start()
     {
@@ -33,12 +30,6 @@ public class PlayerScript : MonoBehaviour
         Andar();
         Pular();
         Atirar();
-
-        Scene currentscene = SceneManager.GetActiveScene();
-        if (currentscene.name == "CenaPreBoss" && GerenciadorDeJogo.instance.orbCollected)
-        {
-            orb.SetActive(true);
-        }
     }
 
     void Andar()

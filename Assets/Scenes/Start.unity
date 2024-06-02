@@ -2279,7 +2279,6 @@ GameObject:
   m_Component:
   - component: {fileID: 324601434}
   - component: {fileID: 324601433}
-  - component: {fileID: 324601432}
   m_Layer: 0
   m_Name: GerenciadorDeJogo
   m_TagString: Untagged
@@ -2287,18 +2286,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &324601432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324601431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02ae9966d40001b48893be6315b405fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &324601433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2337,9 +2324,8 @@ MonoBehaviour:
   irFinal: {fileID: 80838515}
   zerou: 0
   character: 
-  maleCharacterPrefab: {fileID: 2579669766355416247, guid: 05b0982f58c41a44489b6e6bdde779f5, type: 3}
-  femaleCharacterPrefab: {fileID: 352595066604246444, guid: f8808ff150db7b149815975dc9210a44, type: 3}
-  spawnPoint: {fileID: 0}
+  maleCharacterPrefab: {fileID: 975677761345935552, guid: a97e27db634d64b45bca1a51ea74dbbf, type: 3}
+  femaleCharacterPrefab: {fileID: 591461036136326482, guid: 29d3708748ad8884f8ecb7da0896f75c, type: 3}
 --- !u!4 &324601434
 Transform:
   m_ObjectHideFlags: 0
