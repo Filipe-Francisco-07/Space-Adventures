@@ -20,6 +20,10 @@ public class MusicPlayer : MonoBehaviour
     public AudioSource coin;
     public AudioSource enemyDying;
     public AudioSource playerDying;
+    public AudioSource SwordAttack;
+    public AudioSource BossKillSound;
+
+    private bool tocandoFinal;
 
     void Awake()
     {
@@ -42,6 +46,7 @@ public class MusicPlayer : MonoBehaviour
         UpdateMusic();
         inicio = true;
         final = false;
+        tocandoFinal = false;
     }
 
     void Update()
@@ -52,12 +57,18 @@ public class MusicPlayer : MonoBehaviour
             currentSceneName = newSceneName;
             UpdateMusic();
         }
+
+        if(GerenciadorDeJogo.instance.zerou && !tocandoFinal){
+            UpdateMusic();
+        }
+
     }
 
     void UpdateMusic()
     {
         if (currentSceneName == "CenaFase1")
         {
+            tocandoFinal = false;
             StopAllMusic();
             phasestheme.SetActive(true);
         }
@@ -68,6 +79,7 @@ public class MusicPlayer : MonoBehaviour
         }
         else if (currentSceneName == "CenaInicial")
         {
+            tocandoFinal = false;
             if (!inicio && !final)
             {
                 StopAllMusic();
@@ -79,16 +91,16 @@ public class MusicPlayer : MonoBehaviour
                 final = false;
             }
         }
-        else if (currentSceneName == "CenaBoss")
+        else if (currentSceneName == "CenaBoss" && !GerenciadorDeJogo.instance.zerou)
         {
             StopAllMusic();
             bosstheme.SetActive(true);
         }
-        else if (currentSceneName == "CenaFinal")
-        {
+        else if(GerenciadorDeJogo.instance.zerou && !(currentSceneName == "CenaFinal")){
             StopAllMusic();
-            maintheme.SetActive(true);
             final = true;
+            maintheme.SetActive(true);
+            tocandoFinal = true;
         }
     }
 

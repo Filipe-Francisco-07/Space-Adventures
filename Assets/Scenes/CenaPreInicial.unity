@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7eb9878d0371004090fa731d44f2fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 800
+  scrollSpeed: 200
   textPanel: {fileID: 921424578}
   monitorImage: {fileID: 33909304}
 --- !u!114 &921424580

@@ -102,6 +102,7 @@ public class Boss_AI : MonoBehaviour
         swordAnimator.SetBool("Idle", false);
         rb.velocity = Vector2.zero;
 
+        MusicPlayer.instance.PlaySound(MusicPlayer.instance.SwordAttack);
         yield return new WaitForSeconds(1f);
 
         isAttacking = false;

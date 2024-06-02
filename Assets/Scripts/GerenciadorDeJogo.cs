@@ -17,7 +17,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     private Image[] heartImages;
     private bool block;
     private int totalCollected;
-    public int bossHealth = 10;
+    public int bossHealth = 1000;
     private int currentBossHP; 
     public Slider healthSlider;
     public TMP_Text showBossHP;
@@ -90,7 +90,6 @@ public class GerenciadorDeJogo : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("Resume");
         pause.SetActive(false);
         Scene currentScene = SceneManager.GetActiveScene();
         if(currentScene.name == "CenaBoss"){
@@ -195,6 +194,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         UpdateCoins();
         SaveData();
         zerou = true;
+        MusicPlayer.instance.PlaySound(MusicPlayer.instance.BossKillSound);
     }
 
     public void ResetLevelCoins()
@@ -284,7 +284,7 @@ public class GerenciadorDeJogo : MonoBehaviour
          if(nomeCena == "CenaFase1"){
             totalCoins = 0;
             GameInterface.SetActive(true);
-            bossHealth = 10;
+            bossHealth = 1000;
         }
 
         if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal"))
