@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -192,7 +192,6 @@ MonoBehaviour:
   velocidade: 5
   projectilePrefab: {fileID: 6334433695255315458, guid: 265d0681fe7b07f499c770522127a815, type: 3}
   firePoint: {fileID: 9074043009126060509}
-  orb: {fileID: 0}
 --- !u!1 &6931281955734196021
 GameObject:
   m_ObjectHideFlags: 0
