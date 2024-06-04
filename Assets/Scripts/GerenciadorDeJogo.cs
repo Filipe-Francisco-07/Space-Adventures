@@ -30,6 +30,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     public GameObject playerStats;
     public TMP_Text NameStats;
     public TMP_Text CoinStats;
+    public TMP_Text CharStats;
     public bool lookingStats;
     public GameObject openChest;
     public GameObject orbReceive;
@@ -162,6 +163,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         playerStats.SetActive(true);
         NameStats.text = PlayerPrefs.GetString("playerName");
         CoinStats.text = PlayerPrefs.GetInt("totalCoins").ToString();
+        CharStats.text = PlayerPrefs.GetString("character");
         lookingStats = true;
     }
     public void HideStats()
@@ -170,7 +172,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         playerStats.SetActive(false);
         lookingStats = false;
         Scene currentScene = SceneManager.GetActiveScene();
-        if(currentScene.name == "CenaFinal"){
+        if(currentScene.name == "CenaFinal" && Lunaris2Trigger.entrouNave){
             lastScene.SetActive(true);
         } else if(isGameScene){
             Pause();
@@ -202,7 +204,6 @@ public class GerenciadorDeJogo : MonoBehaviour
     {
         collectedCoins += 5000;
         UpdateCoins();
-        SaveData();
         zerou = true;
         MusicPlayer.instance.PlaySound(MusicPlayer.instance.BossKillSound);
     }
