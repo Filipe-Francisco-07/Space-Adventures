@@ -6474,6 +6474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Voador_Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6099812468036254430, guid: 404062982f16ca649b88af37e863b063, type: 3}
+      propertyPath: velocidade
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 6221273378981174535, guid: 404062982f16ca649b88af37e863b063, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.7945414
