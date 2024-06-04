@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1105891469331927118}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.353, y: -0.271, z: 0}
+  m_LocalPosition: {x: -0.363, y: -0.253, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1515708103205198672}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.342, y: 0.008, z: 0}
+  m_LocalPosition: {x: -0.368, y: -0.028, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 7541528831061028017}
   - component: {fileID: 3315856091212254208}
   - component: {fileID: 6099812468036254430}
+  - component: {fileID: 382761428428519103}
   m_Layer: 16
   m_Name: Voador_Enemy
   m_TagString: Voador_Enemy
@@ -123,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3005122133555364278}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.1, y: 5.66, z: -0.052144665}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
@@ -153,7 +154,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -310,9 +311,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06971048, y: -0.12735544}
+  m_Offset: {x: -0.06736009, y: -0.114036664}
   serializedVersion: 2
-  m_Radius: 0.12329584
+  m_Radius: 0.15620105
 --- !u!114 &6099812468036254430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,4 +332,57 @@ MonoBehaviour:
   velocidade: -3
   lay:
     serializedVersion: 2
-    m_Bits: 65792
+    m_Bits: 65920
+--- !u!114 &382761428428519103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3005122133555364278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.065527275, y: -0.2603396, z: 0}
+  - {x: -0.23007815, y: -0.09202865, z: -0.00000011920929}
+  - {x: -0.22446005, y: -0.07693675, z: -0.000000011175871}
+  - {x: -0.078743175, y: -0.07838666, z: -0.000000011175871}
+  - {x: -0.080193475, y: -0.047938455, z: -0.000000011175871}
+  - {x: -0.1708134, y: -0.03996391, z: -0.000000011175871}
+  - {x: -0.18023793, y: -0.031989325, z: -0.000000011175871}
+  - {x: -0.2234749, y: -0.030154096, z: -0.00000011920929}
+  - {x: -0.23823468, y: -0.020389982, z: -0.000000011175871}
+  - {x: -0.23750982, y: 0.00063384906, z: -0.000000011175871}
+  - {x: -0.22591035, y: 0.008608394, z: -0.000000011175871}
+  - {x: -0.19728851, y: 0.011979275, z: 0}
+  - {x: -0.18096288, y: 0.012958183, z: -0.000000011175871}
+  - {x: -0.15196459, y: 0.02165764, z: -0.000000011175871}
+  - {x: 0.051024124, y: 0.018757794, z: -0.000000011175871}
+  - {x: 0.060448572, y: 0.010783209, z: -0.000000011175871}
+  - {x: 0.10240091, y: 0.008354598, z: 0}
+  - {x: 0.11047082, y: -0.0029909876, z: -0.000000011175871}
+  - {x: 0.10612103, y: -0.017490216, z: -0.000000011175871}
+  - {x: 0.097421534, y: -0.023289828, z: -0.000000011175871}
+  - {x: 0.06914811, y: -0.026914703, z: -0.000000011175871}
+  - {x: 0.051024165, y: -0.02981451, z: -0.000000011175871}
+  - {x: 0.030000335, y: -0.039239038, z: -0.000000011175871}
+  - {x: -0.04032079, y: -0.0457636, z: -0.000000011175871}
+  - {x: -0.04032075, y: -0.079836674, z: -0.000000011175871}
+  - {x: 0.103946134, y: -0.08056167, z: -0.000000011175871}
+  - {x: 0.09472045, y: -0.10095119, z: 0}
+  m_ShapePathHash: 1852244715
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -326738
+  m_LocalBounds:
+    m_Center: {x: -0.06388193, y: -0.11934097, z: 0}
+    m_Extent: {x: 0.17435275, y: 0.14099862, z: 0}

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1426194676816206451}
   - component: {fileID: 7863809949337499859}
   - component: {fileID: 6240380365761277187}
-  m_Layer: 0
+  - component: {fileID: 3012950169358330978}
+  m_Layer: 15
   m_Name: Serra
-  m_TagString: Untagged
+  m_TagString: EnemyInstantKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ca5ce7f3f3ac3bb499d37119b1867d7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -137,7 +138,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -155,5 +156,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ef0543705d0cf46b46022914b72d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 5
+  velocidade: 4
   tempo_vigilha: 1
+--- !u!114 &3012950169358330978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7481044807219187036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.18588609, y: -0.08098133, z: 0}
+  - {x: -0.19226879, y: 0.049795475, z: 0}
+  - {x: -0.13754767, y: 0.14166157, z: 0}
+  - {x: -0.048283074, y: 0.18761215, z: 0}
+  - {x: 0.05559312, y: 0.18555523, z: 0}
+  - {x: 0.14988936, y: 0.1303483, z: 0}
+  - {x: 0.19032362, y: 0.018942043, z: 0}
+  - {x: 0.1769534, y: -0.08904878, z: 0}
+  - {x: 0.12417745, y: -0.1478324, z: 0}
+  - {x: 0.030909883, y: -0.1888109, z: 0}
+  - {x: -0.07707967, y: -0.17749722, z: 0}
+  m_ShapePathHash: 33885936
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -418128
+  m_LocalBounds:
+    m_Center: {x: -0.0009725839, y: -0.0005993694, z: 0}
+    m_Extent: {x: 0.1912962, y: 0.18821153, z: 0}

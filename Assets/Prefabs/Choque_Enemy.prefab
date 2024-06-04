@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6937805080680915728}
   - component: {fileID: 4412048597299584840}
   - component: {fileID: 2117535972516521312}
-  - component: {fileID: 1788361719810208463}
   - component: {fileID: 5018174993136193568}
   m_Layer: 15
   m_Name: Choque_Enemy
@@ -108,18 +107,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1788361719810208463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7869289740346519980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb09bcd16df3e2a4bb83c0ccfba97ae8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &5018174993136193568
 PolygonCollider2D:
   m_ObjectHideFlags: 0

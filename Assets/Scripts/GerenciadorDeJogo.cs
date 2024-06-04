@@ -301,7 +301,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal"))
         {
             string newSceneName = SceneManager.GetActiveScene().name;
-            if (newSceneName != currentSceneName)
+            if (newSceneName != currentSceneName && nomeCena != "CenaInicial")
             {
                 MusicPlayer.instance.PlaySound(MusicPlayer.instance.phasePassed);
             }
