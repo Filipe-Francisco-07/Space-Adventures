@@ -47,9 +47,11 @@ public class GerenciadorDeJogo : MonoBehaviour
     public GameObject femaleCharacterPrefab;
     private GameObject currentCharacter;
     private string selectedCharacter;
+    public bool dialogou;
 
     void Start()
     {
+        dialogou = false;
         SceneManager.sceneLoaded += OnSceneLoaded;
         zerou = false;
         orbCollected = false;
@@ -277,6 +279,9 @@ public class GerenciadorDeJogo : MonoBehaviour
         SceneManager.LoadScene(nomeCena);
 
         if(nomeCena=="CenaFinal"){
+            if(dialogou){
+                dialogou = false;
+            }
             GameInterface.SetActive(false);
             BossLifebar.SetActive(false);
             Lunaris2.SetActive(true);

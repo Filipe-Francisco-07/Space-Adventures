@@ -14,6 +14,7 @@ TagManager:
   - Enemy
   - SpawnPoint
   - NonCollisionBG
+  - Boss
   layers:
   - Default
   - TransparentFX
