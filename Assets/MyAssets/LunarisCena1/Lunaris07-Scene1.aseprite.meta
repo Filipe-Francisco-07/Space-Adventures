@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 1081
       width: 337
       height: 318
-    spriteID: 466b28757419e35458af44cc2d11b928
+    spriteID: fa2f248b990454f42b13cdb0b52139c4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 373
       width: 337
       height: 346
-    spriteID: a6e051e32a09aa548b2f9b134e97cb2d
+    spriteID: f31d04334e6255741bae84909c1d19f2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 1582
       width: 337
       height: 361
-    spriteID: 7f61be3190f8014409672ccb4f71ae77
+    spriteID: ed2e3a90899399a4b96aa9e78941b5e9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 804
       width: 337
       height: 381
-    spriteID: a36808a390760234fa21988bfdaf6cd9
+    spriteID: 75831d566f0a5704fa451ae7e5c9e8ce
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 1220
       width: 337
       height: 394
-    spriteID: 914e21697c07ec046a1363a056d00368
+    spriteID: 9b0e239a56e18c341a2aa2c35b67f54e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 412
       width: 337
       height: 396
-    spriteID: c8ec43f1056852d41aa02a484e051d58
+    spriteID: 906db27e581cc5b40abffd4a0485ad57
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 4
       width: 337
       height: 392
-    spriteID: 6381a06f3d284c546ab1542298bc8c6b
+    spriteID: 6c78753b049890e4cb9b94cb0a2e4987
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 4
       width: 337
       height: 400
-    spriteID: 1c662bcc24794904c855047b6d398de9
+    spriteID: f2cbaec79f576a843999c2b5e51e63ed
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 404
       width: 337
       height: 392
-    spriteID: 3074c293b05b3b0429063f0e0cf915ae
+    spriteID: 29857fd503673de4a877f93a4e3c1615
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 816
       width: 337
       height: 396
-    spriteID: 8a4996c8bf6232e47bd49ae34735d21a
+    spriteID: 7ec825d43fda4754fbdb6076ecf6bd5a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 1622
       width: 337
       height: 394
-    spriteID: 7f293817a37caae4f99c04c76631bf9d
+    spriteID: b8ae80b387d53de4086e621fc0047bda
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 1193
       width: 337
       height: 381
-    spriteID: 1dfcf9114c606444fa4a975d53bad484
+    spriteID: fcf610da221d053409f8da1f09bd85ba
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 4
       width: 337
       height: 361
-    spriteID: 5e5dcaee4027570449548cece02ce98b
+    spriteID: 555596c6cf6888a47b2a88b3fdde7b09
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -392,7 +392,7 @@ ScriptedImporter:
       y: 727
       width: 337
       height: 346
-    spriteID: 5326b0c92ffd9ec4d8bf87e2656cc730
+    spriteID: 4414340b733a9d544b4b13c7aec67c9e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -412,7 +412,7 @@ ScriptedImporter:
       y: 1407
       width: 337
       height: 318
-    spriteID: 052ea1334f2ac9a4ba255143565176c9
+    spriteID: 15f934fe15a1dfe43b868889c4536adf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -432,7 +432,7 @@ ScriptedImporter:
       y: 4
       width: 337
       height: 318
-    spriteID: 62428015b3e689f4a8aa554a2c26f974
+    spriteID: 81d50ce0491510347a7809998b8e0210
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -452,7 +452,7 @@ ScriptedImporter:
       y: 330
       width: 337
       height: 318
-    spriteID: 7ef998411e63e184eb148cfdff3cf7b2
+    spriteID: eef583946ae25c149aabe893b7d72292
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -477,7 +477,7 @@ ScriptedImporter:
         y: 68
         width: 337
         height: 318
-      spriteId: 466b28757419e35458af44cc2d11b928
+      spriteId: fa2f248b990454f42b13cdb0b52139c4
     - name: Lunaris07-Scene1_Frame_1
       frameIndex: 1
       cellRect:
@@ -485,7 +485,7 @@ ScriptedImporter:
         y: 40
         width: 337
         height: 346
-      spriteId: a6e051e32a09aa548b2f9b134e97cb2d
+      spriteId: f31d04334e6255741bae84909c1d19f2
     - name: Lunaris07-Scene1_Frame_2
       frameIndex: 2
       cellRect:
@@ -493,7 +493,7 @@ ScriptedImporter:
         y: 25
         width: 337
         height: 361
-      spriteId: 7f61be3190f8014409672ccb4f71ae77
+      spriteId: ed2e3a90899399a4b96aa9e78941b5e9
     - name: Lunaris07-Scene1_Frame_3
       frameIndex: 3
       cellRect:
@@ -501,7 +501,7 @@ ScriptedImporter:
         y: 9
         width: 337
         height: 381
-      spriteId: a36808a390760234fa21988bfdaf6cd9
+      spriteId: 75831d566f0a5704fa451ae7e5c9e8ce
     - name: Lunaris07-Scene1_Frame_4
       frameIndex: 4
       cellRect:
@@ -509,7 +509,7 @@ ScriptedImporter:
         y: 0
         width: 337
         height: 394
-      spriteId: 914e21697c07ec046a1363a056d00368
+      spriteId: 9b0e239a56e18c341a2aa2c35b67f54e
     - name: Lunaris07-Scene1_Frame_5
       frameIndex: 5
       cellRect:
@@ -517,7 +517,7 @@ ScriptedImporter:
         y: 4
         width: 337
         height: 396
-      spriteId: c8ec43f1056852d41aa02a484e051d58
+      spriteId: 906db27e581cc5b40abffd4a0485ad57
     - name: Lunaris07-Scene1_Frame_6
       frameIndex: 6
       cellRect:
@@ -525,7 +525,7 @@ ScriptedImporter:
         y: 17
         width: 337
         height: 392
-      spriteId: 6381a06f3d284c546ab1542298bc8c6b
+      spriteId: 6c78753b049890e4cb9b94cb0a2e4987
     - name: Lunaris07-Scene1_Frame_7
       frameIndex: 7
       cellRect:
@@ -533,7 +533,7 @@ ScriptedImporter:
         y: 20
         width: 337
         height: 400
-      spriteId: 1c662bcc24794904c855047b6d398de9
+      spriteId: f2cbaec79f576a843999c2b5e51e63ed
     - name: Lunaris07-Scene1_Frame_8
       frameIndex: 8
       cellRect:
@@ -541,7 +541,7 @@ ScriptedImporter:
         y: 17
         width: 337
         height: 392
-      spriteId: 3074c293b05b3b0429063f0e0cf915ae
+      spriteId: 29857fd503673de4a877f93a4e3c1615
     - name: Lunaris07-Scene1_Frame_9
       frameIndex: 9
       cellRect:
@@ -549,7 +549,7 @@ ScriptedImporter:
         y: 4
         width: 337
         height: 396
-      spriteId: 8a4996c8bf6232e47bd49ae34735d21a
+      spriteId: 7ec825d43fda4754fbdb6076ecf6bd5a
     - name: Lunaris07-Scene1_Frame_10
       frameIndex: 10
       cellRect:
@@ -557,7 +557,7 @@ ScriptedImporter:
         y: 0
         width: 337
         height: 394
-      spriteId: 7f293817a37caae4f99c04c76631bf9d
+      spriteId: b8ae80b387d53de4086e621fc0047bda
     - name: Lunaris07-Scene1_Frame_11
       frameIndex: 11
       cellRect:
@@ -565,7 +565,7 @@ ScriptedImporter:
         y: 9
         width: 337
         height: 381
-      spriteId: 1dfcf9114c606444fa4a975d53bad484
+      spriteId: fcf610da221d053409f8da1f09bd85ba
     - name: Lunaris07-Scene1_Frame_12
       frameIndex: 12
       cellRect:
@@ -573,7 +573,7 @@ ScriptedImporter:
         y: 25
         width: 337
         height: 361
-      spriteId: 5e5dcaee4027570449548cece02ce98b
+      spriteId: 555596c6cf6888a47b2a88b3fdde7b09
     - name: Lunaris07-Scene1_Frame_13
       frameIndex: 13
       cellRect:
@@ -581,7 +581,7 @@ ScriptedImporter:
         y: 40
         width: 337
         height: 346
-      spriteId: 5326b0c92ffd9ec4d8bf87e2656cc730
+      spriteId: 4414340b733a9d544b4b13c7aec67c9e
     - name: Lunaris07-Scene1_Frame_14
       frameIndex: 14
       cellRect:
@@ -589,7 +589,7 @@ ScriptedImporter:
         y: 68
         width: 337
         height: 318
-      spriteId: 052ea1334f2ac9a4ba255143565176c9
+      spriteId: 15f934fe15a1dfe43b868889c4536adf
     - name: Lunaris07-Scene1_Frame_15
       frameIndex: 15
       cellRect:
@@ -597,7 +597,7 @@ ScriptedImporter:
         y: 68
         width: 337
         height: 318
-      spriteId: 62428015b3e689f4a8aa554a2c26f974
+      spriteId: 81d50ce0491510347a7809998b8e0210
     - name: Lunaris07-Scene1_Frame_16
       frameIndex: 16
       cellRect:
@@ -605,7 +605,7 @@ ScriptedImporter:
         y: 68
         width: 337
         height: 318
-      spriteId: 7ef998411e63e184eb148cfdff3cf7b2
+      spriteId: eef583946ae25c149aabe893b7d72292
     linkedCells: []
     parentIndex: -1
   platformSettings: []
