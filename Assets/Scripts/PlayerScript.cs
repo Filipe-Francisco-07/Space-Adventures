@@ -27,9 +27,11 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        Andar();
-        Pular();
-        Atirar();
+        if(!GerenciadorDeJogo.instance.playermoveblock){
+            Andar();
+            Pular();
+            Atirar();    
+        }
     }
 
     void Andar()
@@ -43,7 +45,7 @@ public class PlayerScript : MonoBehaviour
             {
                 animacao.SetBool("jump", true);
                 animacao.SetBool("walk", false);
-                transform.localScale = new Vector3(1f, 1f, 1f); // Vira para a direita
+                transform.localScale = new Vector3(1f, 1f, 1f);
             }
             else
             {
@@ -57,7 +59,7 @@ public class PlayerScript : MonoBehaviour
             {
                 animacao.SetBool("jump", true);
                 animacao.SetBool("walk", false);
-                transform.localScale = new Vector3(-1f, 1f, 1f); // Vira para a esquerda
+                transform.localScale = new Vector3(-1f, 1f, 1f);
             }
             else
             {
@@ -132,28 +134,23 @@ public class PlayerScript : MonoBehaviour
             pulando = false;
             animacao.SetBool("jump", false);
         }
-        if (collision.gameObject.layer == 10 //&& GerenciadorDeJogo.instance.currentCoins >= 500
-        )
+        if (collision.gameObject.layer == 10 && GerenciadorDeJogo.instance.currentCoins >= 500)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase1.2");
         }
-        if (collision.gameObject.layer == 11// && GerenciadorDeJogo.instance.currentCoins >= 500
-        )
+        if (collision.gameObject.layer == 11 && GerenciadorDeJogo.instance.currentCoins >= 500)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase1.3");
         }
-        if (collision.gameObject.layer == 12// && GerenciadorDeJogo.instance.currentCoins >= 600
-        )
+        if (collision.gameObject.layer == 12 && GerenciadorDeJogo.instance.currentCoins >= 600)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2");
         }
-        if (collision.gameObject.layer == 13 //&& GerenciadorDeJogo.instance.currentCoins >= 500
-        )
+        if (collision.gameObject.layer == 13 && GerenciadorDeJogo.instance.currentCoins >= 500)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2.2");
         }
-        if (collision.gameObject.layer == 14 //&& GerenciadorDeJogo.instance.currentCoins >= 700
-        )
+        if (collision.gameObject.layer == 14 && GerenciadorDeJogo.instance.currentCoins >= 700)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaFase2.3");
         }
@@ -162,8 +159,7 @@ public class PlayerScript : MonoBehaviour
             GerenciadorDeJogo.instance.ResetHealth();
             GerenciadorDeJogo.instance.TrocarCena("CenaBoss");
         }
-        if (collision.gameObject.layer == 19 //&& GerenciadorDeJogo.instance.currentCoins >= 500
-        )
+        if (collision.gameObject.layer == 19 && GerenciadorDeJogo.instance.currentCoins >= 500)
         {
             GerenciadorDeJogo.instance.TrocarCena("CenaPreBoss");
         }

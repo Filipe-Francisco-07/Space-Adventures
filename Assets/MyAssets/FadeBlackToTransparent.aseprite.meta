@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 128
       height: 128
-    spriteID: b3b61e5522dcdcc4ebad66bef939baf1
+    spriteID: 011a0c1c02720cb4cb632bba11e8c7f7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 140
       width: 128
       height: 128
-    spriteID: 9fb45330e18da464786818ede783b02f
+    spriteID: 0a22a357eea33594e9d36d5463a2a51f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 276
       width: 128
       height: 128
-    spriteID: 30e36079354b5f142b082825b565577c
+    spriteID: ba9178dc781fc4e4cb3043490cfc9e0b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 412
       width: 128
       height: 128
-    spriteID: a32998fb9fdd1bd4cb0ee446f9e2b981
+    spriteID: dd579191212a7c14cbfd0c4570aca444
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 548
       width: 128
       height: 128
-    spriteID: 2276ad4fbe328d4438932ad7335788d4
+    spriteID: e68ee9239d7a98b4899e3709fd9aadc3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 684
       width: 128
       height: 128
-    spriteID: cf550e539cc3c0b4a9a8fb98f5ffe2ef
+    spriteID: d0ee40c31402b004082e00b835b05f75
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 820
       width: 128
       height: 128
-    spriteID: d9571784ce692a442a7a14a10cbf03af
+    spriteID: 5804fe689454f37479a720a9188a9527
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 4
       width: 128
       height: 128
-    spriteID: 3b98167f0d1fa5642a4c3d23052dc526
+    spriteID: 87c2991e196c1424790827eca216e6a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 140
       width: 128
       height: 128
-    spriteID: 5f050623d30eee848bb6946dfd74d51e
+    spriteID: a226838a1ac71504facd50fb18f1a49a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 276
       width: 128
       height: 128
-    spriteID: b98aef32142b68e4e8663efae45e9678
+    spriteID: ab6cef89f4e780340951a5d256e8bdd8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 412
       width: 128
       height: 128
-    spriteID: 8ea536677e8a4f147b90abef3f7afcd9
+    spriteID: 2655c59aba7598342bc975962c881e6e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 548
       width: 128
       height: 128
-    spriteID: bc74a0c6b0e71894c8580c469bbd4528
+    spriteID: d2eaab6d0abf6944695cc8142e31a13f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 684
       width: 128
       height: 128
-    spriteID: bedf5c5babb561941af00502b7a02715
+    spriteID: d22bf0228e700d249a90a77bcb07d253
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -397,7 +397,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: b3b61e5522dcdcc4ebad66bef939baf1
+      spriteId: 011a0c1c02720cb4cb632bba11e8c7f7
     - name: FadeBlackToTransparent_Frame_1
       frameIndex: 1
       cellRect:
@@ -405,7 +405,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: 9fb45330e18da464786818ede783b02f
+      spriteId: 0a22a357eea33594e9d36d5463a2a51f
     - name: FadeBlackToTransparent_Frame_2
       frameIndex: 2
       cellRect:
@@ -413,7 +413,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: 30e36079354b5f142b082825b565577c
+      spriteId: ba9178dc781fc4e4cb3043490cfc9e0b
     - name: FadeBlackToTransparent_Frame_3
       frameIndex: 3
       cellRect:
@@ -421,7 +421,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: a32998fb9fdd1bd4cb0ee446f9e2b981
+      spriteId: dd579191212a7c14cbfd0c4570aca444
     - name: FadeBlackToTransparent_Frame_4
       frameIndex: 4
       cellRect:
@@ -429,7 +429,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: 2276ad4fbe328d4438932ad7335788d4
+      spriteId: e68ee9239d7a98b4899e3709fd9aadc3
     - name: FadeBlackToTransparent_Frame_5
       frameIndex: 5
       cellRect:
@@ -437,7 +437,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: cf550e539cc3c0b4a9a8fb98f5ffe2ef
+      spriteId: d0ee40c31402b004082e00b835b05f75
     - name: FadeBlackToTransparent_Frame_6
       frameIndex: 6
       cellRect:
@@ -445,7 +445,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: d9571784ce692a442a7a14a10cbf03af
+      spriteId: 5804fe689454f37479a720a9188a9527
     - name: FadeBlackToTransparent_Frame_7
       frameIndex: 7
       cellRect:
@@ -453,7 +453,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: 3b98167f0d1fa5642a4c3d23052dc526
+      spriteId: 87c2991e196c1424790827eca216e6a9
     - name: FadeBlackToTransparent_Frame_8
       frameIndex: 8
       cellRect:
@@ -461,7 +461,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: 5f050623d30eee848bb6946dfd74d51e
+      spriteId: a226838a1ac71504facd50fb18f1a49a
     - name: FadeBlackToTransparent_Frame_9
       frameIndex: 9
       cellRect:
@@ -469,7 +469,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: b98aef32142b68e4e8663efae45e9678
+      spriteId: ab6cef89f4e780340951a5d256e8bdd8
     - name: FadeBlackToTransparent_Frame_10
       frameIndex: 10
       cellRect:
@@ -477,7 +477,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: 8ea536677e8a4f147b90abef3f7afcd9
+      spriteId: 2655c59aba7598342bc975962c881e6e
     - name: FadeBlackToTransparent_Frame_11
       frameIndex: 11
       cellRect:
@@ -485,7 +485,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: bc74a0c6b0e71894c8580c469bbd4528
+      spriteId: d2eaab6d0abf6944695cc8142e31a13f
     - name: FadeBlackToTransparent_Frame_12
       frameIndex: 12
       cellRect:
@@ -493,7 +493,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 128
-      spriteId: bedf5c5babb561941af00502b7a02715
+      spriteId: d22bf0228e700d249a90a77bcb07d253
     linkedCells: []
     parentIndex: -1
   platformSettings: []

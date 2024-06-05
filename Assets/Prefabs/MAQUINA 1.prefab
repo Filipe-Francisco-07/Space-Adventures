@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 5381610389222894547, guid: d91d038fed36b6a469d427ced45d2dc6, type: 3}
+  m_Sprite: {fileID: -8823252811918848140, guid: d6e1a75e2df498a4190097114263bf21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -147,7 +147,7 @@ Animator:
   m_GameObject: {fileID: 2916421650308795134}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4920ef3fdbc8ede438bada39c2b19747, type: 2}
+  m_Controller: {fileID: 7076390687451112992, guid: d6e1a75e2df498a4190097114263bf21, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   velocidade: -4
   lay:
     serializedVersion: 2
-    m_Bits: 65792
+    m_Bits: 4260096
 --- !u!114 &9079252023375730682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ MonoBehaviour:
   - {x: 1.1499996, y: 0.3600006, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -320438
+  m_InstanceId: -52126
   m_LocalBounds:
     m_Center: {x: -0.00000023841858, y: 1.2650006, z: 0}
     m_Extent: {x: 1.1499999, y: 0.905, z: 0}

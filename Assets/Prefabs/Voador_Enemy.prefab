@@ -329,10 +329,10 @@ MonoBehaviour:
   right: {fileID: 2443121450589221547}
   left: {fileID: 99635917603947643}
   top: {fileID: 6358070526976550037}
-  velocidade: -3
+  velocidade: -5
   lay:
     serializedVersion: 2
-    m_Bits: 65920
+    m_Bits: 4260224
 --- !u!114 &382761428428519103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +382,7 @@ MonoBehaviour:
   - {x: 0.09472045, y: -0.10095119, z: 0}
   m_ShapePathHash: 1852244715
   m_Mesh: {fileID: 0}
-  m_InstanceId: -326738
+  m_InstanceId: -239166
   m_LocalBounds:
     m_Center: {x: -0.06388193, y: -0.11934097, z: 0}
     m_Extent: {x: 0.17435275, y: 0.14099862, z: 0}

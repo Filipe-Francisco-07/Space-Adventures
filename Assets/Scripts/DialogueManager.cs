@@ -35,6 +35,8 @@ public class DialogueManager : MonoBehaviour
 
       private IEnumerator SetupBossScene()
     {
+        GerenciadorDeJogo.instance.playermoveblock = true;
+        GerenciadorDeJogo.instance.bossmoveblock = true;
         yield return new WaitForSeconds(0.1f);
 
         boss = GameObject.FindWithTag("Boss");
@@ -117,5 +119,8 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
         EnableControls(player,boss); 
         GerenciadorDeJogo.instance.dialogou = true;
+        GerenciadorDeJogo.instance.playermoveblock = false;
+        GerenciadorDeJogo.instance.bossmoveblock = false;
+
     }
 }

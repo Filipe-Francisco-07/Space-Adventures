@@ -48,9 +48,16 @@ public class GerenciadorDeJogo : MonoBehaviour
     private GameObject currentCharacter;
     private string selectedCharacter;
     public bool dialogou;
+    public GameObject fade;
+    private Animator fadeAnimator;
+    public bool playermoveblock;
+    public bool bossmoveblock;
 
     void Start()
     {
+        playermoveblock = false;
+        bossmoveblock = false;
+        fadeAnimator = fade.GetComponent<Animator>();
         dialogou = false;
         SceneManager.sceneLoaded += OnSceneLoaded;
         zerou = false;
@@ -277,6 +284,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     public void TrocarCena(string nomeCena)
     {
         SceneManager.LoadScene(nomeCena);
+        StartCoroutine(Fade());
 
         if(nomeCena=="CenaFinal"){
             if(dialogou){
@@ -303,14 +311,16 @@ public class GerenciadorDeJogo : MonoBehaviour
             bossHealth = 1000;
         }
 
-        if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal"))
+        if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal")&& !(nomeCena =="CenaInicial"))
         {
             string newSceneName = SceneManager.GetActiveScene().name;
-            if (newSceneName != currentSceneName && nomeCena != "CenaInicial")
+            if (newSceneName != currentSceneName)
             {
                 MusicPlayer.instance.PlaySound(MusicPlayer.instance.phasePassed);
             }
-            currentSceneName = newSceneName;
+            if(currentSceneName != newSceneName){
+                currentSceneName = newSceneName;  
+            }
         }
 
         playerDied = false;
@@ -319,6 +329,20 @@ public class GerenciadorDeJogo : MonoBehaviour
         SaveData();
         currentCoins = 0;
 
+    }
+      private IEnumerator Fade()
+    {
+        float leng = 0;
+        AnimationClip[] clips = fadeAnimator.runtimeAnimatorController.animationClips;
+        foreach(AnimationClip clip in clips){
+            if(clip.name == "fade"){
+                leng = clip.length;
+            }
+        }
+        fade.SetActive(true);
+        fadeAnimator.Play("fade");
+        yield return new WaitForSeconds(leng - 0.05f);
+        fade.SetActive(false);
     }
      public void StartGame()
     {

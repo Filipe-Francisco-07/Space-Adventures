@@ -15,6 +15,7 @@ TagManager:
   - SpawnPoint
   - NonCollisionBG
   - Boss
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -38,7 +39,7 @@ TagManager:
   - TrocarFasePreBoss
   - TrocarFaseFinal
   - NonCollisionBG
-  - 
+  - Wall
   - 
   - 
   - 

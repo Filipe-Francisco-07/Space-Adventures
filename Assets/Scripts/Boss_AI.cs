@@ -26,69 +26,83 @@ public class Boss_AI : MonoBehaviour
 
     void Update()
     {
-        if (player == null)
-        {
-            player = GameObject.FindWithTag("Player")?.transform;
-            
+        if(!GerenciadorDeJogo.instance.bossmoveblock){
             if (player == null)
             {
+                player = GameObject.FindWithTag("Player")?.transform;
+            
+                if (player == null)
+                {
+                    return;
+                }
+            }
+
+            if (GerenciadorDeJogo.instance.bossHealth <= 0 && !GerenciadorDeJogo.instance.zerou)
+            {
+                StartCoroutine(BossDeath());
                 return;
             }
-        }
 
-        if (GerenciadorDeJogo.instance.bossHealth <= 0 && !GerenciadorDeJogo.instance.zerou)
-        {
-            Destroy(gameObject, 0.5f);
-            GerenciadorDeJogo.instance.BossKiller();
-            StartCoroutine(Esperar());
-            GerenciadorDeJogo.instance.irFinal.SetActive(true);
-            GerenciadorDeJogo.instance.BossLifebar.SetActive(false);
-            return;
-        }
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-
-        if (isAttacking)
-        {
-            animator.SetBool("Attacking", true);
-            swordAnimator.SetBool("Attacking", true);
-            animator.SetBool("Walking", false);
-            swordAnimator.SetBool("Walking", false);
-            animator.SetBool("Idle", false);
-            swordAnimator.SetBool("Idle", false);
-            return;
-        }
-
-        if (distanceToPlayer <= attackDistance)
-        {
-            StartCoroutine(Attack());
-        }
-        else
-        {
-            animator.SetBool("Walking", true);
-            swordAnimator.SetBool("Walking", true);
-            animator.SetBool("Idle", false);
-            swordAnimator.SetBool("Idle", false);
-            animator.SetBool("Attacking", false);
-            swordAnimator.SetBool("Attacking", false);
-
-            Vector2 direction = (player.position - transform.position).normalized;
-            rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
-
-            if (direction.x > 0 && facingRight)
+            if (isAttacking)
             {
-                Flip();
+                animator.SetBool("Attacking", true);
+                swordAnimator.SetBool("Attacking", true);
+                animator.SetBool("Walking", false);
+                swordAnimator.SetBool("Walking", false);
+                animator.SetBool("Idle", false);
+                swordAnimator.SetBool("Idle", false);
+                return;
             }
-            else if (direction.x < 0 && !facingRight)
+
+            if (distanceToPlayer <= attackDistance)
             {
-                Flip();
+                StartCoroutine(Attack());
+            }
+            else
+            {
+                animator.SetBool("Walking", true);
+                swordAnimator.SetBool("Walking", true);
+                animator.SetBool("Idle", false);
+                swordAnimator.SetBool("Idle", false);
+                animator.SetBool("Attacking", false);
+                swordAnimator.SetBool("Attacking", false);
+
+                Vector2 direction = (player.position - transform.position).normalized;
+                rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+
+                if (direction.x > 0 && facingRight)
+                {
+                    Flip();
+                }
+                else if (direction.x < 0 && !facingRight)
+                {
+                    Flip();
+                }
             }
         }
     }
 
-    IEnumerator Esperar()
+      private IEnumerator BossDeath()
     {
-        yield return new WaitForSeconds(5f);
+        GerenciadorDeJogo.instance.bossmoveblock = true;
+        rb.velocity = Vector2.zero;
+
+        rb.constraints = RigidbodyConstraints2D.None;
+
+        float torque = facingRight ? -10f : 10f;
+        rb.AddTorque(torque, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(3f);
+
+        GerenciadorDeJogo.instance.BossKiller();
+        GerenciadorDeJogo.instance.irFinal.SetActive(true);
+        GerenciadorDeJogo.instance.BossLifebar.SetActive(false);
+
+        Destroy(gameObject);
+
+        GerenciadorDeJogo.instance.bossmoveblock = false;
     }
 
     IEnumerator Attack()

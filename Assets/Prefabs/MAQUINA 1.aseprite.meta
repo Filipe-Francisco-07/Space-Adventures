@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d91d038fed36b6a469d427ced45d2dc6
+guid: 5353e543a15904a4a96230b3b589590b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: MAQUINA_Frame_0
+  - name: MAQUINA 1_Frame_0
     originalName: 
     pivot: {x: 0.49999997, y: -0.19889504}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 230
       height: 181
-    spriteID: 5f996e4a5d9179245960d9422f7b3d64
+    spriteID: 21c7cb31275732d41971f7297043535b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: MAQUINA_Frame_1
+  - name: MAQUINA 1_Frame_1
     originalName: 
     pivot: {x: 0.49999997, y: -0.19889504}
     alignment: 9
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 193
       width: 230
       height: 181
-    spriteID: e25b86acc6a4c1d408be3c53d7fb94bc
+    spriteID: d3d746237ebe2724196dc4dcb18a4500
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,7 +161,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 193}
-  - name: MAQUINA_Frame_2
+  - name: MAQUINA 1_Frame_2
     originalName: 
     pivot: {x: 0.49999997, y: -0.19889504}
     alignment: 9
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 4
       width: 230
       height: 181
-    spriteID: 18f2407286779014eb30b05c312f616f
+    spriteID: 430cc79e6c781eb44b05853cbe7f4efc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,7 +181,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 242, y: 4}
-  - name: MAQUINA_Frame_3
+  - name: MAQUINA 1_Frame_3
     originalName: 
     pivot: {x: 0.49999997, y: -0.19889504}
     alignment: 9
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 193
       width: 230
       height: 181
-    spriteID: a84a288bcf15a8b4abe139f241e72ad7
+    spriteID: 3a08f1bb6d78ee64c84b5ea2f261f899
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -204,44 +204,44 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 670991260
-    name: MAQUINA
+    guid: -574015745
+    name: MAQUINA 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: MAQUINA_Frame_0
+    - name: MAQUINA 1_Frame_0
       frameIndex: 0
       cellRect:
         x: 13
         y: 36
         width: 230
         height: 181
-      spriteId: 5f996e4a5d9179245960d9422f7b3d64
-    - name: MAQUINA_Frame_1
+      spriteId: 21c7cb31275732d41971f7297043535b
+    - name: MAQUINA 1_Frame_1
       frameIndex: 1
       cellRect:
         x: 13
         y: 36
         width: 230
         height: 181
-      spriteId: e25b86acc6a4c1d408be3c53d7fb94bc
-    - name: MAQUINA_Frame_2
+      spriteId: d3d746237ebe2724196dc4dcb18a4500
+    - name: MAQUINA 1_Frame_2
       frameIndex: 2
       cellRect:
         x: 13
         y: 36
         width: 230
         height: 181
-      spriteId: 18f2407286779014eb30b05c312f616f
-    - name: MAQUINA_Frame_3
+      spriteId: 430cc79e6c781eb44b05853cbe7f4efc
+    - name: MAQUINA 1_Frame_3
       frameIndex: 3
       cellRect:
         x: 13
         y: 36
         width: 230
         height: 181
-      spriteId: a84a288bcf15a8b4abe139f241e72ad7
+      spriteId: 3a08f1bb6d78ee64c84b5ea2f261f899
     linkedCells: []
     parentIndex: -1
   platformSettings: []
