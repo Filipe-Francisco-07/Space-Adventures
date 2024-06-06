@@ -103,6 +103,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         ZerarCoins();
         ResetHealth();
         TrocarCena("CenaFase1");
+        pause.SetActive(false);
         GameInterface.SetActive(true);
         BossLifebar.SetActive(false);
         lastScene.SetActive(false);
@@ -114,6 +115,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     public void MainMenu()
     {
         Scene currentScene = SceneManager.GetActiveScene();
+        pause.SetActive(false);
         GameInterface.SetActive(false);
         BossLifebar.SetActive(false);
         lastScene.SetActive(false);
@@ -254,7 +256,6 @@ public class GerenciadorDeJogo : MonoBehaviour
     public void TrocarCena(string nomeCena)
     {
         SceneManager.LoadScene(nomeCena);
-        StartCoroutine(Fade());
 
         if(nomeCena=="CenaFinal"){
             if(dialogou){
@@ -276,6 +277,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         }
 
          if(nomeCena == "CenaFase1"){
+            StartCoroutine(Fade());
             totalCoins = 0;
             GameInterface.SetActive(true);
             bossHealth = 1000;
@@ -283,6 +285,7 @@ public class GerenciadorDeJogo : MonoBehaviour
 
         if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal")&& !(nomeCena =="CenaInicial")  && !(resetou))
         {
+            StartCoroutine(Fade());
             string newSceneName = SceneManager.GetActiveScene().name;
             if ((newSceneName != currentSceneName))
             {

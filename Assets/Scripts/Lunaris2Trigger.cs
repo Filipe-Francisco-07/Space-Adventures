@@ -13,6 +13,8 @@ public class Lunaris2Trigger : MonoBehaviour
         anim = GetComponent<Animator>();
         entrouNave = false;
         InArea = false;
+        anim.SetBool("Idle", true);
+        anim.SetBool("Fly", false);
     }
 
     void OnTriggerEnter2D(Collider2D collider){
@@ -61,10 +63,11 @@ public class Lunaris2Trigger : MonoBehaviour
         if (animationLength > 0) {
             yield return new WaitForSeconds(animationLength);
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
         GerenciadorDeJogo.instance.Lunaris2.SetActive(false);
         GerenciadorDeJogo.instance.lastScene.SetActive(true);
         MusicPlayer.instance.PlaySound(MusicPlayer.instance.bossKilled);
+        entrouNave = false;
     }
 
     private float GetAnimationClipLength(string animationName){

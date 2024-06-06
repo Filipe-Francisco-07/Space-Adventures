@@ -8,6 +8,7 @@ public class ScrollText : MonoBehaviour
     public float scrollSpeed = 60f; 
     public RectTransform textPanel; 
     public RectTransform monitorImage; 
+    public RectTransform skip; 
     private bool isScrolling = true; 
 
     void Update()
@@ -16,12 +17,16 @@ public class ScrollText : MonoBehaviour
         {
             textPanel.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
             monitorImage.anchoredPosition -= new Vector2(0, scrollSpeed * Time.deltaTime);
+            skip.anchoredPosition -= new Vector2(0, scrollSpeed * Time.deltaTime);
 
             if (textPanel.anchoredPosition.y >= 5000)
             {
                 isScrolling = false; 
                 SceneManager.LoadScene("CenaInicial");
             }
+        }
+        if(Input.GetKeyDown(KeyCode.Escape)){
+                SceneManager.LoadScene("CenaInicial");
         }
     }
 }

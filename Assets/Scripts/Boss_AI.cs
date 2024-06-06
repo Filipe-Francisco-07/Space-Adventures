@@ -14,10 +14,12 @@ public class Boss_AI : MonoBehaviour
     private PolygonCollider2D bossCollider;
     private bool isDying;
     public GameObject sword;  
-    private Animator swordAnimator;  
+    private Animator swordAnimator; 
+    private bool blockall; 
 
     void Start()
     {
+        blockall = false;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         swordAnimator = sword.GetComponent<Animator>();
@@ -26,7 +28,7 @@ public class Boss_AI : MonoBehaviour
 
     void Update()
     {
-        if(!GerenciadorDeJogo.instance.bossmoveblock){
+        if(!GerenciadorDeJogo.instance.bossmoveblock && !blockall){
             if (player == null)
             {
                 player = GameObject.FindWithTag("Player")?.transform;
@@ -86,6 +88,14 @@ public class Boss_AI : MonoBehaviour
 
       private IEnumerator BossDeath()
     {
+        blockall = true;
+        animator.SetBool("Attacking", false);
+        swordAnimator.SetBool("Attacking", false);
+        animator.SetBool("Walking", false);
+        swordAnimator.SetBool("Walking", false);
+        animator.SetBool("Idle", true);
+        swordAnimator.SetBool("Idle", true);
+
         GerenciadorDeJogo.instance.bossmoveblock = true;
         rb.velocity = Vector2.zero;
 
@@ -103,25 +113,28 @@ public class Boss_AI : MonoBehaviour
         Destroy(gameObject);
 
         GerenciadorDeJogo.instance.bossmoveblock = false;
+        blockall = false;
     }
 
     IEnumerator Attack()
     {
-        isAttacking = true;
-        animator.SetBool("Attacking", true);
-        swordAnimator.SetBool("Attacking", true);
-        animator.SetBool("Walking", false);
-        swordAnimator.SetBool("Walking", false);
-        animator.SetBool("Idle", false);
-        swordAnimator.SetBool("Idle", false);
-        rb.velocity = Vector2.zero;
+        if(!blockall){
+            isAttacking = true;
+            animator.SetBool("Attacking", true);
+            swordAnimator.SetBool("Attacking", true);
+            animator.SetBool("Walking", false);
+            swordAnimator.SetBool("Walking", false);
+            animator.SetBool("Idle", false);
+            swordAnimator.SetBool("Idle", false);
+            rb.velocity = Vector2.zero;
 
-        MusicPlayer.instance.PlaySound(MusicPlayer.instance.SwordAttack);
-        yield return new WaitForSeconds(1f);
+            MusicPlayer.instance.PlaySound(MusicPlayer.instance.SwordAttack);
+            yield return new WaitForSeconds(1f);
 
-        isAttacking = false;
-        animator.SetBool("Attacking", false);
-        swordAnimator.SetBool("Attacking", false);
+            isAttacking = false;
+            animator.SetBool("Attacking", false);
+            swordAnimator.SetBool("Attacking", false);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
