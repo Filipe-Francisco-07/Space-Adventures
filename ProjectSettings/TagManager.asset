@@ -16,6 +16,7 @@ TagManager:
   - NonCollisionBG
   - Boss
   - Wall
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - TrocarFaseFinal
   - NonCollisionBG
   - Wall
-  - 
+  - Box
   - 
   - 
   - 

@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 5789200093759024960}
   - component: {fileID: 1518750911181478944}
   - component: {fileID: 3577951827066795359}
-  - component: {fileID: 7780517576109147331}
-  m_Layer: 8
+  - component: {fileID: 3248050652511180394}
+  m_Layer: 23
   m_Name: PF Village Props - Crate Small
-  m_TagString: Ground
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300002, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7780517576109147331
+--- !u!114 &3248050652511180394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,7 +185,7 @@ MonoBehaviour:
   - {x: 0.5625, y: -0.53125, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 55812
+  m_InstanceId: 95600
   m_LocalBounds:
     m_Center: {x: 0.015625, y: 0.015625, z: 0}
     m_Extent: {x: 0.546875, y: 0.546875, z: 0}

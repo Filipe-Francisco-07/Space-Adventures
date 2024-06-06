@@ -4,55 +4,22 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
 public class GerenciadorDeJogo : MonoBehaviour
 {
-    public int totalCoins;
-    public int collectedCoins;
-    public int currentCoins;
-    public TMP_Text showCoins;
-    public static GerenciadorDeJogo instance;
-    public GameObject HealthPoints;
-    private int currentHealth;
-    private Image[] heartImages;
-    private bool block;
-    private int totalCollected;
-    public int bossHealth = 1000;
-    private int currentBossHP; 
-    public Slider healthSlider;
-    public TMP_Text showBossHP;
-    private bool paused;
-    public GameObject pause;
-    public GameObject lastScene;
-    public GameObject GameInterface;
-    public GameObject BossLifebar;
-    public TMP_Text ShowLastMessage;
-    public GameObject playerStats;
-    public TMP_Text NameStats;
-    public TMP_Text CoinStats;
-    public TMP_Text CharStats;
-    public bool lookingStats;
-    public GameObject openChest;
-    public GameObject orbReceive;
-    public bool orbCollected;
-    public bool isGameScene;
-    private string currentSceneName = "";
-    private bool playerDied = false;
-    public GameObject Lunaris2;
-    public GameObject enterLunaris;
-    public GameObject irFinal;
-    public bool zerou;
-    public string character;
-    public GameObject maleCharacterPrefab;
-    public GameObject femaleCharacterPrefab;
+    public int totalCoins, collectedCoins, currentCoins, bossHealth = 1000;
+    public TMP_Text showCoins, ShowLastMessage, NameStats, CoinStats, CharStats, showBossHP;
+    public GameObject HealthPoints, pause, lastScene, GameInterface, BossLifebar, playerStats, openChest;
+    public GameObject orbReceive, maleCharacterPrefab, femaleCharacterPrefab, fade, Lunaris2, enterLunaris, irFinal;
+    public bool orbCollected, isGameScene, playermoveblock, bossmoveblock, dialogou, zerou, lookingStats;
     private GameObject currentCharacter;
-    private string selectedCharacter;
-    public bool dialogou;
-    public GameObject fade;
+    private int currentHealth, totalCollected, currentBossHP;
+    private Image[] heartImages;
+    private bool block, paused, playerDied = false;
+    public Slider healthSlider;
+    public string character;
+    private string selectedCharacter, currentSceneName = "";
     private Animator fadeAnimator;
-    public bool playermoveblock;
-    public bool bossmoveblock;
-
+    public static GerenciadorDeJogo instance;
     void Start()
     {
         playermoveblock = false;
@@ -328,7 +295,6 @@ public class GerenciadorDeJogo : MonoBehaviour
         block = false;
         SaveData();
         currentCoins = 0;
-
     }
       private IEnumerator Fade()
     {
