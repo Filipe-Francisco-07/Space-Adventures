@@ -14,19 +14,15 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float velocidade;
     public LayerMask lay;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {  
         rb.velocity = new Vector2(velocidade, rb.velocity.y);
 
-        // Detecta a colisão com a parede usando Raycast
         RaycastHit2D hit = Physics2D.Raycast(right.position, Vector2.right, 0.1f, lay);
         if (hit.collider != null)
         {
@@ -40,18 +36,12 @@ public class EnemyAI : MonoBehaviour
         }
           
     }
-
-    // Inverte a direção do movimento
     void InverterDirecao()
     {
-        // Inverte a escala no eixo X para mudar a direção visualmente
         transform.localScale = new Vector2(transform.localScale.x * -1f, transform.localScale.y);
 
-        // Inverte a velocidade para mudar a direção do movimento
         velocidade = -velocidade;
     }
-
-
     void OnCollisionEnter2D(Collision2D colisao){
         if(colisao.gameObject.tag == "Player"){
             float altura = colisao.contacts[0].point.y - top.position.y;

@@ -14,7 +14,6 @@ public class MoonCoin : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         cc = GetComponent<CircleCollider2D>();
     }
-
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Player"))

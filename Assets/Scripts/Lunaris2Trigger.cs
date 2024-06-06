@@ -8,7 +8,6 @@ public class Lunaris2Trigger : MonoBehaviour
     public static bool entrouNave;
     private Animator anim;
     private GameObject player;
-    public string flyAnimationName = "2LunarisFly";
 
     void Start(){
         anim = GetComponent<Animator>();
@@ -51,7 +50,7 @@ public class Lunaris2Trigger : MonoBehaviour
                     anim.SetBool("Idle", false);
                     anim.SetBool("Fly", true);
                     entrouNave = true;
-                    StartCoroutine(WaitForAnimationToEnd(flyAnimationName));
+                    StartCoroutine(WaitForAnimationToEnd("2LunarisFly"));
                 }
             }
         }

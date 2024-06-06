@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 5f; // Velocidade do projétil
+    public float speed = 5f;
     private Vector2 direction;
-
-    public void SetDirection(Vector2 direction)
-    {
-        this.direction = direction;
-        Destroy(gameObject, 2f); // Destroi o projétil após 2 segundos
-    }
 
     void Update()
     {
         transform.Translate(direction * speed * Time.deltaTime);
+    }
+
+    public void SetDirection(Vector2 direction)
+    {
+        this.direction = direction;
+        Destroy(gameObject, 2f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

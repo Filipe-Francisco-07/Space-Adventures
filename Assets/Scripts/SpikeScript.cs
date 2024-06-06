@@ -21,7 +21,6 @@ public class SpikeScript : MonoBehaviour
             GerenciadorDeJogo.instance.KillPlayer(collider, currentScene.name);
         }
     }
-
     IEnumerator ResetarMorte(float delay)
     {
         yield return new WaitForSeconds(delay);

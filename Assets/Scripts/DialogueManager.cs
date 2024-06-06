@@ -8,8 +8,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public TMP_Text speakerNameText;
     public GameObject dialoguePanel;
-    public float typingSpeed = 0.05f; // Velocidade da digitação
-
+    public float typingSpeed = 0.05f;
     private Queue<string> sentences;
     private Queue<string> speakers;
     private bool isDialogueActive;

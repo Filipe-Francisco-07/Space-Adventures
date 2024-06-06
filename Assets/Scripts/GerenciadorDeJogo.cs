@@ -10,7 +10,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     public TMP_Text showCoins, ShowLastMessage, NameStats, CoinStats, CharStats, showBossHP;
     public GameObject HealthPoints, pause, lastScene, GameInterface, BossLifebar, playerStats, openChest;
     public GameObject orbReceive, maleCharacterPrefab, femaleCharacterPrefab, fade, Lunaris2, enterLunaris, irFinal;
-    public bool orbCollected, isGameScene, playermoveblock, bossmoveblock, dialogou, zerou, lookingStats;
+    public bool orbCollected, isGameScene, playermoveblock, bossmoveblock, dialogou, zerou, lookingStats, resetou;
     private GameObject currentCharacter;
     private int currentHealth, totalCollected, currentBossHP;
     private Image[] heartImages;
@@ -22,6 +22,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     public static GerenciadorDeJogo instance;
     void Start()
     {
+        resetou = false;
         playermoveblock = false;
         bossmoveblock = false;
         fadeAnimator = fade.GetComponent<Animator>();
@@ -87,12 +88,13 @@ public class GerenciadorDeJogo : MonoBehaviour
 
      public void Restart()
      {
-        currentHealth --;
+        resetou = true;
         Scene currentScene = SceneManager.GetActiveScene();
         TrocarCena(currentScene.name);
         pause.SetActive(false);
         Time.timeScale = 1;   
         paused = false;
+        resetou = false;
     }
 
     public void TotalRestart()
@@ -106,6 +108,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         lastScene.SetActive(false);
         orbCollected = false;
         zerou = false;
+        resetou = true;
     }
 
     public void MainMenu()
@@ -278,10 +281,10 @@ public class GerenciadorDeJogo : MonoBehaviour
             bossHealth = 1000;
         }
 
-        if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal")&& !(nomeCena =="CenaInicial"))
+        if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal")&& !(nomeCena =="CenaInicial")  && !(resetou))
         {
             string newSceneName = SceneManager.GetActiveScene().name;
-            if (newSceneName != currentSceneName)
+            if ((newSceneName != currentSceneName))
             {
                 MusicPlayer.instance.PlaySound(MusicPlayer.instance.phasePassed);
             }
@@ -289,9 +292,7 @@ public class GerenciadorDeJogo : MonoBehaviour
                 currentSceneName = newSceneName;  
             }
         }
-
         playerDied = false;
-
         block = false;
         SaveData();
         currentCoins = 0;
@@ -307,7 +308,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         }
         fade.SetActive(true);
         fadeAnimator.Play("fade");
-        yield return new WaitForSeconds(leng - 0.05f);
+        yield return new WaitForSeconds(leng - 0.10f);
         fade.SetActive(false);
     }
      public void StartGame()

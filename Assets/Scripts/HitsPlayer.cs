@@ -17,5 +17,4 @@ public class HitsPlayer : MonoBehaviour
             GerenciadorDeJogo.instance.KillPlayer(colisao.collider,currentscene.name.ToString());
         }
     }
-
 }

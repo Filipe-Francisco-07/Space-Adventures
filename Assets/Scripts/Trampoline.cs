@@ -16,6 +16,5 @@ public class Trampoline : MonoBehaviour
             animator.SetTrigger("Ativa");
             collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, force), ForceMode2D.Impulse);          
         }
-}   
-
+    }   
 }
