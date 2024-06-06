@@ -5,10 +5,18 @@ using UnityEngine;
 public class ChestScript : MonoBehaviour
 {
     private bool entered;
+    public GameObject chest;
+    private Animator anim;
+
+    void Start(){
+        anim = GetComponent<Animator>();
+    }
     
     void Update(){
         if(entered && !GerenciadorDeJogo.instance.orbCollected){
             if(Input.GetKeyDown(KeyCode.E)){
+                MusicPlayer.instance.PlaySound(MusicPlayer.instance.OpenChest);
+                anim.SetBool("IsOpened",true);
                 GerenciadorDeJogo.instance.openChest.SetActive(false);
                 GerenciadorDeJogo.instance.orbReceive.SetActive(true);
                 entered = true;

@@ -76,13 +76,13 @@ public class DialogueManager : MonoBehaviour
         speakers.Clear();
 
         speakers.Enqueue("Player");
-        sentences.Enqueue("So it was you who stole my ship! I ask you to get out of the way or I will have to defeat you");
+        sentences.Enqueue("So it was you who stole my ship! I ask you to get out of the way or I will have to defeat you.");
         
         speakers.Enqueue("Boss");
-        sentences.Enqueue("I'm impressed that you made it this far to get your ship back, but now you will die mercilessly");
+        sentences.Enqueue("I'm impressed that you made it this far to get your ship back, but now you will die mercilessly!");
         
         speakers.Enqueue("Player");
-        sentences.Enqueue("That's what we'll see");
+        sentences.Enqueue("That's what we'll see.");
 
         isDialogueActive = true;
         DisplayNextSentence(player, boss);

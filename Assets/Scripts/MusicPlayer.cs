@@ -22,7 +22,7 @@ public class MusicPlayer : MonoBehaviour
     public AudioSource playerDying;
     public AudioSource SwordAttack;
     public AudioSource BossKillSound;
-
+    public AudioSource OpenChest;
     private bool tocandoFinal;
 
     void Awake()
