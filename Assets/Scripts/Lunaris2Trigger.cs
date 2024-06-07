@@ -5,7 +5,7 @@ using UnityEngine;
 public class Lunaris2Trigger : MonoBehaviour
 {
     private bool InArea;
-    public static bool entrouNave;
+    public static bool entrouNave, estafinal;
     private Animator anim;
     private GameObject player;
 
@@ -52,6 +52,7 @@ public class Lunaris2Trigger : MonoBehaviour
                     anim.SetBool("Idle", false);
                     anim.SetBool("Fly", true);
                     entrouNave = true;
+                    estafinal= true;
                     StartCoroutine(WaitForAnimationToEnd("2LunarisFly"));
                 }
             }

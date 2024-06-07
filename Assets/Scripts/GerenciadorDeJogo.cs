@@ -39,7 +39,7 @@ public class GerenciadorDeJogo : MonoBehaviour
     void Update(){
         Scene currentScene = SceneManager.GetActiveScene();
 
-        isGameScene = currentScene.name.StartsWith("CenaFase") || currentScene.name == "CenaPreBoss" ||  currentScene.name == "CenaBoss" || (currentScene.name == "CenaFinal" && !Lunaris2Trigger.entrouNave);
+        isGameScene = currentScene.name.StartsWith("CenaFase") || currentScene.name == "CenaPreBoss" ||  currentScene.name == "CenaBoss" || (currentScene.name == "CenaFinal" && !Lunaris2Trigger.estafinal);
         if(isGameScene && !paused){
             if(Input.GetKeyDown(KeyCode.Escape)){
                 Pause();
@@ -103,6 +103,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         ZerarCoins();
         ResetHealth();
         TrocarCena("CenaFase1");
+        Lunaris2Trigger.estafinal = false;
         pause.SetActive(false);
         GameInterface.SetActive(true);
         BossLifebar.SetActive(false);
@@ -114,6 +115,7 @@ public class GerenciadorDeJogo : MonoBehaviour
 
     public void MainMenu()
     {
+        Lunaris2Trigger.estafinal = false;
         Scene currentScene = SceneManager.GetActiveScene();
         pause.SetActive(false);
         GameInterface.SetActive(false);
@@ -153,7 +155,7 @@ public class GerenciadorDeJogo : MonoBehaviour
         playerStats.SetActive(false);
         lookingStats = false;
         Scene currentScene = SceneManager.GetActiveScene();
-        if(currentScene.name == "CenaFinal" && Lunaris2Trigger.entrouNave){
+        if(currentScene.name == "CenaFinal" && Lunaris2Trigger.estafinal){
             lastScene.SetActive(true);
         } else if(isGameScene){
             Pause();
@@ -261,6 +263,8 @@ public class GerenciadorDeJogo : MonoBehaviour
             if(dialogou){
                 dialogou = false;
             }
+            SaveData();
+            UpdateCoins();
             GameInterface.SetActive(false);
             BossLifebar.SetActive(false);
             Lunaris2.SetActive(true);
@@ -268,6 +272,7 @@ public class GerenciadorDeJogo : MonoBehaviour
             ShowLastMessage.text = ("CONGRATULATIONS "+PlayerPrefs.GetString("playerName")+", YOU BEATED THE GAME AND COLLECTED A TOTAL OF "+ PlayerPrefs.GetInt("totalCoins").ToString() + " MOON COINS, THAT'S AWESOME!");
         }
         if(nomeCena == "CenaBoss"){
+            StartCoroutine(Fade());
             BossLifebar.SetActive(true);  
             GameInterface.SetActive(true);  
             currentBossHP = bossHealth;
@@ -281,6 +286,7 @@ public class GerenciadorDeJogo : MonoBehaviour
             totalCoins = 0;
             GameInterface.SetActive(true);
             bossHealth = 1000;
+            Lunaris2Trigger.estafinal = true;
         }
 
         if (isGameScene && currentHealth > 0 && !playerDied && !(nomeCena =="CenaFinal")&& !(nomeCena =="CenaInicial")  && !(resetou))
