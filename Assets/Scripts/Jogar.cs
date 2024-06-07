@@ -9,6 +9,7 @@ public class Jogar : MonoBehaviour
     public TMP_InputField inputField;
     public TMP_Text avisoText;
     public string nome;
+    public string charac;
     public Image maleCharacter;
     public Image femaleCharacter;
 
@@ -26,6 +27,7 @@ public class Jogar : MonoBehaviour
     void Start()
     {
         string nome = PlayerPrefs.GetString("playerName");
+        string charac = PlayerPrefs.GetString("character");
         if (!string.IsNullOrEmpty(nome))
         {
             inputField.text = nome;
