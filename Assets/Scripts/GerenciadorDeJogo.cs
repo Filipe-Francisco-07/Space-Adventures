@@ -269,7 +269,7 @@ public class GerenciadorDeJogo : MonoBehaviour
             BossLifebar.SetActive(false);
             Lunaris2.SetActive(true);
             lastScene.SetActive(false);
-            ShowLastMessage.text = ("CONGRATULATIONS "+PlayerPrefs.GetString("playerName")+", YOU BEATED THE GAME AND COLLECTED A TOTAL OF "+ PlayerPrefs.GetInt("totalCoins").ToString() + " MOON COINS, THAT'S AWESOME!");
+            ShowLastMessage.text = ("CONGRATULATIONS "+PlayerPrefs.GetString("playerName")+", YOU BEATED THE GAME AND COLLECTED A TOTAL OF "+ (PlayerPrefs.GetInt("totalCoins")+5000).ToString() + " MOON COINS, THAT'S AWESOME!");
         }
         if(nomeCena == "CenaBoss"){
             StartCoroutine(Fade());
